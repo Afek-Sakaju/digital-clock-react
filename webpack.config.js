@@ -6,11 +6,17 @@ module.exports = {
     path: path.join(__dirname, "/dist"), // the bundle output path
     filename: "bundle.js", // the name of the bundle
   },
+  resolve: {
+    extensions: ["*", ".js", ".jsx"], // adding .js and .jsx as extensions to be resolved
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: "src/index.html", // to import index.html file inside index.js
     }),
   ],
+  optimization: {
+    emitOnErrors: false,
+  },
   devServer: {
     port: 3030, // you can change the port
   },
