@@ -1,0 +1,15 @@
+@mixin dayTextDesign{
+    
+}
+
+.dayTextActive {
+  padding: 0 20px 0 20px;
+  font-size: 60px;
+  color: aqua;
+}
+
+.dayTextPassive {
+  color: aqua;
+  font-size: 70px;
+  opacity: 0.5;
+}
