@@ -1,12 +1,7 @@
 import React from "react";
 
 function App() {
-  return (
-    <>
-      <h1>Hesadslo 98989</h1>
-      <div className="trapezoid"></div>;
-    </>
-  );
+  return <div className="main-container">6699878</div>;
 }
 
 export default App;
