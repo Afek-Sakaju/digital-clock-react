@@ -1,11 +1,12 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Digit } from "../../base-components";
-import './DigitsClock.scss'
+import "./DigitsClock.scss";
 
 export function DigitsClock({ value }) {
   return (
     <div className="numbersContainer">
+      <Digit value={value} />
       <Digit value={value} />
     </div>
   );
