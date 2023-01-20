@@ -3,16 +3,14 @@ import { DaysGroups, DigitsClock } from "./components";
 
 function App() {
   const [dayState, toggleDayState] = useState(false);
-  const [numberState, changeNumberState] = useState(0);
+  const [numberState, changeNumberState] = useState(1);
 
   return (
     <div className="mainContainer">
       <div className="daysContainer">
         <DaysGroups value={dayState} />
       </div>
-      <div className="numbersContainer">
-        <DigitsClock value={numberState} />
-      </div>
+      <DigitsClock value={numberState} />
     </div>
   );
 }

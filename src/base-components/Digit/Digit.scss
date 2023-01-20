@@ -1,0 +1,25 @@
+.digitsContainer {
+  display: flex;
+  box-sizing: border-box;
+
+  height: 90%;
+  width: 15%;
+  border: 5px green solid;
+}
+
+.trapezoid {
+  border-bottom: 30px solid transparent;
+  border-top: 30px solid transparent;
+  border-left: 30px solid;
+  height: 70px;
+  border-left-color: rgb(0, 0, 0);
+
+  &.passive {
+    opacity: 0.5;
+  }
+}
+
+#d1 {
+  position: relative;
+  bottom: 20px;
+}
