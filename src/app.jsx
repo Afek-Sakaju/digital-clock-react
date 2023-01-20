@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { daysArray } from "./consts";
-import { DayText } from "./base-components";
+import { DaysGroups } from "./components";
 
 function App() {
   const [dayState, toggleDayState] = useState(false);
@@ -8,9 +7,7 @@ function App() {
   return (
     <div className="mainContainer">
       <div className="daysContainer">
-        {daysArray.map((day, index) => {
-          return <DayText label={day} value={dayState} key={index} />;
-        })}
+        <DaysGroups value={dayState} />
       </div>
       <div className="numbersContainer"></div>
     </div>
