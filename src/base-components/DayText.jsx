@@ -2,14 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./DayText.scss";
 
-export function DayText({ label, value, key }) {
+export function DayText({ label, value }) {
   const className = value ? "dayTextActive" : "dayTextPassive";
 
-  return (
-    <div key={key} className={className}>
-      {label}
-    </div>
-  );
+  return <div className={className}>{label}</div>;
 }
 
 DayText.propTypes = {

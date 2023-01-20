@@ -3,7 +3,7 @@ import { daysArray } from "./consts";
 import { DayText } from "./base-components";
 
 function App() {
-  const [dayState, toggleDayState] = useState(true);
+  const [dayState, toggleDayState] = useState(false);
 
   return (
     <div className="mainContainer">
