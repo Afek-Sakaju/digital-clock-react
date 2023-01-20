@@ -8,6 +8,12 @@ export function DigitsClock({ value }) {
     <div className="numbersContainer">
       <Digit value={value} />
       <Digit value={value} />
+      <div className="twoDots">:</div>
+      <Digit value={value} />
+      <Digit value={value} />
+      <div className="twoDots">:</div>
+      <Digit value={value} />
+      <Digit value={value} />
     </div>
   );
 }
