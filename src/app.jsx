@@ -12,6 +12,7 @@ function App() {
           return <DayText label={day} value={dayState} key={index} />;
         })}
       </div>
+      <div className="numbersContainer"></div>
     </div>
   );
 }
