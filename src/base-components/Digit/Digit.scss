@@ -4,36 +4,39 @@
   height: 90%;
   width: 15%;
   border: 5px green solid;
+  position: relative;
 }
 
+// define all trapezids at their structure !
+// not rotate!
 .trapezoid {
   border-bottom: 30px solid transparent;
   border-top: 30px solid transparent;
   border-left: 30px solid;
   height: 70px;
+
   border-left-color: rgb(0, 0, 0);
   &.passive {
-    opacity: 0.6;
+    opacity: 0.7;
   }
 }
 
 #d1 {
-  position: relative;
-  bottom: 40px;
-  left: 54px;
+  position: absolute;
+  top: 0;
   transform: rotate(90deg);
 }
 
 #d2 {
-  position: relative;
-  bottom: -17px;
-  left: -27px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 #d3 {
-  position: relative;
-  bottom: -17px;
-  left: 45px;
+  position: absolute;
+  top: 0;
+  right: 0;
   transform: rotate(180deg);
 }
 
@@ -41,16 +44,16 @@
   border-bottom: unset;
   border-top: unset;
   border-left: unset;
-  position: relative;
+  position: absolute;
   width: 72px;
   height: 40px;
-  left: -57px;
-  bottom: -134px;
+  top: 0;
+  bottom: 0;
 }
 
 #d4:before {
   content: "";
-  position: relative;
+  position: absolute;
   bottom: -49.5px;
   left: -23.5px;
   border-left: solid 60px transparent;
@@ -60,7 +63,7 @@
 
 #d4:after {
   content: "";
-  position: relative;
+  position: absolute;
   bottom: 32.5px;
   left: -144px;
   border-left: solid 60px transparent;
@@ -69,21 +72,20 @@
 }
 
 #d5 {
-  position: relative;
-  bottom: -160px;
-  left: -159px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 #d6 {
-  position: relative;
-  bottom: -160px;
-  left: -87px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
   transform: rotate(180deg);
 }
 
 #d7 {
-  position: relative;
-  bottom: -216px;
-  left: -168.3px;
+  position: absolute;
+  bottom: 0;
   transform: rotate(270deg);
 }
