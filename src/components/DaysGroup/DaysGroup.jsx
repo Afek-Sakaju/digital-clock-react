@@ -2,14 +2,15 @@ import PropTypes from "prop-types";
 import { daysArray } from "../../consts";
 import { DayText } from "../../base-components";
 
-export function DaysGroups(value) {
+export function DaysGroups({currentDay}) {
   return daysArray.map((day, index) => {
-    return <DayText label={day.toUpperCase()} value={value} key={index} />;
+    
+    return <DayText label={day.toUpperCase()} currentDay={currentDay} key={index} />;
   });
 }
 
 DaysGroups.propTypes = {
-  value: PropTypes.bool,
+  currentDay: PropTypes.string,
 };
 
 //DayText.defaultProps = {};

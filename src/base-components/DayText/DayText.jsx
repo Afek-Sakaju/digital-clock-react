@@ -1,16 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./DayText.scss";
+import {daysArray} from '../../consts'
 
-export function DayText({ label, value }) {
-  const className = value ? "dayTextActive" : "dayTextPassive";
+export function DayText({ label, currentDay }) {
+  const isCurrentDay = !(label.localeCompare(daysArray[currentDay], 'en', { sensitivity: 'base' }));
+  const className =  isCurrentDay ? "dayText" : "dayText passive";
 
   return <div className={className}>{label}</div>;
 }
 
 DayText.propTypes = {
   label: PropTypes.string,
-  value: PropTypes.bool,
+  currentDay: PropTypes.string,
 };
 
 DayText.defaultProps = {

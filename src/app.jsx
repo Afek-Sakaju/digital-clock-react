@@ -2,15 +2,13 @@ import React, { useState } from "react";
 import { DaysGroups, DigitsClock } from "./components";
 
 function App() {
-  const [dayState, toggleDayState] = useState(false);
+  const [currentDay, setCurrentDay] = useState(new Date().getDay());
   const [ampmState, setAmPmState] = useState('AM');
-  //const [numberState, changeNumberState] = useState(1);
-
 
   return (
     <div className="mainContainer">
       <div className="daysContainer">
-        <DaysGroups value={dayState} />
+        <DaysGroups currentDay={currentDay} />
       </div>
       <DigitsClock updateAmPm={setAmPmState} ampmState = {ampmState}/>
       {ampmState}

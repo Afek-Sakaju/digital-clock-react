@@ -23,13 +23,17 @@ export function DigitsClock({ updateAmPm ,ampmState}) {
     }
   },[ampm])
 
+  useEffect(()=>{
+    
+  })
+
   return (
     <div className="numbersContainer">
-      {hh.split('').map((digit)=><Digit value={+digit} />)}
+      {hh.split('').map((digit,index)=><Digit value={+digit} key={`hh ${index}`} />)}
       <div className="twoDots">:</div>
-      {mm.split('').map((digit)=><Digit value={+digit} />)}
+      {mm.split('').map((digit,index)=><Digit value={+digit} key={`mm ${index}`}/>)}
       <div className="twoDots">:</div>
-      {ss.split('').map((digit)=><Digit value={+digit} />)}
+      {ss.split('').map((digit,index)=><Digit value={+digit} key={`ss ${index}`}/>)}
       </div>
   );
 }
