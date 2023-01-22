@@ -6,7 +6,7 @@ import { activeLinesByNumber, trapezoids } from "../../consts";
 
 export function Digit({ value }) {
   return (
-    <span style={{fontSize:'80px'}}>{value}</span>
+    <span style={{fontSize:'180px'}}>{value}</span>
   );
 }
 

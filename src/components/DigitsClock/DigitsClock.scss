@@ -1,5 +1,6 @@
 .numbersContainer {
   display: flex;
+  justify-content: center; // didn't exist on trapezoids
   flex-direction: row;
   box-sizing: border-box;
   align-items: center;

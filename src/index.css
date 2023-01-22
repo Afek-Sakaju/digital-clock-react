@@ -36,6 +36,17 @@ body {
   gap: 50px;
 }
 
+.daysContainerOld-Trapezoid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  border: 5px rgb(58, 184, 0) solid;
+  height: 20%;
+  width: 80%;
+}
+
 .daysContainer {
   display: flex;
   justify-content: center;
