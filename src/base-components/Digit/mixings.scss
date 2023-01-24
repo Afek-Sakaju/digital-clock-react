@@ -1,0 +1,43 @@
+@mixin trapezoidLeftBase {
+  position: absolute;
+  border-bottom: 30px solid transparent;
+  border-top: 30px solid transparent;
+  border-left: 30px solid;
+  height: 40px;
+  &.passive {
+    opacity: 0.7;
+  }
+}
+
+@mixin trapezoidRightBase {
+  position: absolute;
+  border-bottom: 30px solid transparent;
+  border-top: 30px solid transparent;
+  border-right: 30px solid;
+  height: 40px;
+  &.passive {
+    opacity: 0.7;
+  }
+}
+
+@mixin trapezoidBottomBase {
+  position: absolute;
+  border-right: 30px solid transparent;
+  border-left: 30px solid transparent;
+  border-bottom: 30px solid;
+  width: 40px;
+  &.passive {
+    opacity: 0.7;
+  }
+}
+
+@mixin trapezoidTopBase {
+    position: absolute;
+    border-right: 30px solid transparent;
+    border-left: 30px solid transparent;
+    border-top: 30px solid;
+    width: 40px;
+    &.passive {
+      opacity: 0.7;
+    }
+  }

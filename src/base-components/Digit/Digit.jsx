@@ -6,7 +6,18 @@ import { activeLinesByNumber, trapezoids } from "../../consts";
 
 export function Digit({ value }) {
   return (
-    <span style={{fontSize:'180px'}}>{value}</span>
+    <div className="digitsContainer">
+      {trapezoids.map((divNumber, index) => {
+        const isActive = activeLinesByNumber[value].includes(divNumber);
+
+        return (
+          <div
+            key={index}
+            className={isActive ? `d${divNumber}` : `passive d${divNumber}`}
+          ></div>
+        );
+      })}
+    </div>
   );
 }
 

@@ -15,7 +15,7 @@ export function DigitsClock({ updateAmPm ,ampmState,localeTime,setLocaleTime,cur
         minute: 'numeric', 
         second: 'numeric' 
       }));
-    },1000);
+    },50000);
 
     return () => clearInterval(timerInterval);
   },[])
@@ -35,14 +35,16 @@ export function DigitsClock({ updateAmPm ,ampmState,localeTime,setLocaleTime,cur
   return (
     <div className="numbersContainer">
       
-      {hh.split('').map((digit,index)=><Digit value={+digit} key={`hh ${index}`} />)}
-      <div className="twoDots">:</div>
-      {mm.split('').map((digit,index)=><Digit value={+digit} key={`mm ${index}`}/>)}
-      <div className="twoDots">:</div>
-      {ss.split('').map((digit,index)=><Digit value={+digit} key={`ss ${index}`}/>)}
+      <Digit value={hh[1]} key={`hh ${0}`} />
       </div>
   );
 }
+
+//{hh.split('').map((digit,index)=><Digit value={+digit} key={`hh ${index}`} />)} 
+//<div className="twoDots">:</div> 
+//{mm.split('').map((digit,index)=><Digit value={+digit} key={`mm ${index}`}/>)} 
+//<div className="twoDots">:</div> 
+//{ss.split('').map((digit,index)=><Digit value={+digit} key={`ss ${index}`}/>)} 
 
 DigitsClock.propTypes = {
   updateAmPm: PropTypes.func,
