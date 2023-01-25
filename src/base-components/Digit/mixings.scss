@@ -3,7 +3,7 @@
   border-bottom: 30px solid transparent;
   border-top: 30px solid transparent;
   border-left: 30px solid;
-  height: 40px;
+  height: 50px;
   &.passive {
     opacity: 0.3;
   }
@@ -14,7 +14,7 @@
   border-bottom: 30px solid transparent;
   border-top: 30px solid transparent;
   border-right: 30px solid;
-  height: 40px;
+  height: 50px;
   &.passive {
     opacity: 0.3;
   }
@@ -32,12 +32,12 @@
 }
 
 @mixin trapezoidTopBase {
-    position: absolute;
-    border-right: 30px solid transparent;
-    border-left: 30px solid transparent;
-    border-top: 30px solid;
-    width: 40px;
-    &.passive {
-      opacity: 0.3;
-    }
+  position: absolute;
+  border-right: 30px solid transparent;
+  border-left: 30px solid transparent;
+  border-top: 30px solid;
+  width: 40px;
+  &.passive {
+    opacity: 0.3;
   }
+}
