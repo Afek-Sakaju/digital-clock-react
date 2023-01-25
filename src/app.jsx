@@ -15,18 +15,23 @@ function App() {
 
   return (
     <div className="mainContainer">
-      <div className="daysContainer">
-        <DaysGroups currentDay={currentDay} />
+      <div className="componentContainer">
+        <div className="daysContainer">
+          <DaysGroups currentDay={currentDay} />
+        </div>
+
+        <DigitsClock
+          updateAmPm={setAmPmState}
+          ampmState={ampmState}
+          localeTime={localeTime}
+          setLocaleTime={setLocaleTime}
+          currentDay={currentDay}
+          setCurrentDay={setCurrentDay}
+        />
+        <div className="ampmContainer">
+          <div className="ampmText">{ampmState}</div>
+        </div>
       </div>
-      <DigitsClock
-        updateAmPm={setAmPmState}
-        ampmState={ampmState}
-        localeTime={localeTime}
-        setLocaleTime={setLocaleTime}
-        currentDay={currentDay}
-        setCurrentDay={setCurrentDay}
-      />
-      {ampmState}
     </div>
   );
 }

@@ -5,7 +5,7 @@
   box-sizing: border-box;
   height: 90%;
   width: 15%;
-  border: 5px green solid;
+  border: 5px rgba(0, 0, 0, 0.03) solid;
   position: relative;
 }
 
@@ -33,7 +33,7 @@
   border-left: 18px solid transparent;
   border-top: 18px solid;
   &.passive {
-    opacity: 0.3;
+    opacity: $passive-opacity;
   }
   width: 20%;
   left: 5%;
@@ -48,10 +48,10 @@
   border-left: 18px solid transparent;
   border-bottom: 18px solid;
   &.passive {
-    opacity: 0.3;
+    opacity: $passive-opacity;
   }
   width: 100%;
-  top: -87.5%;
+  top: -87%;
   left: -30%;
 }
 
