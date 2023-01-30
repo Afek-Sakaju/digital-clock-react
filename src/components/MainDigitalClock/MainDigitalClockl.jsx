@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { DigitsClock, DaysGroups } from "../index";
-import './MainDigitalClock.scss'
+import { DigitsClock, DaysGroup } from "../index";
+import "./MainDigitalClock.scss";
 
 export function MainDigitalClock() {
   const [ampmState, setAmPmState] = useState("AM");
@@ -15,10 +15,10 @@ export function MainDigitalClock() {
   const [currentDay, setCurrentDay] = useState(localeTime.split(" ")[0]);
 
   return (
-    <div className="mainContainer">
+    <div className="mainContainer" style={{ height: "450px", width: "1100px" }}>
       <div className="componentContainer">
         <div className="daysContainer">
-          <DaysGroups currentDay={currentDay} />
+          <DaysGroup currentDay={currentDay} />
         </div>
 
         <DigitsClock
