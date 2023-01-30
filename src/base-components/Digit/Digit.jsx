@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 import "./Digit.scss";
 import { activeLinesByNumber, trapezoids } from "../../consts";
 
-
 export function Digit({ value }) {
   return (
     <div className="digitsContainer">
@@ -13,7 +12,11 @@ export function Digit({ value }) {
         return (
           <div
             key={index}
-            className={isActive ? `d${divNumber}` : `passive d${divNumber}`}
+            className={
+              isActive
+                ? `d${divNumber}Trapezoid`
+                : `passive d${divNumber}Trapezoid`
+            }
           ></div>
         );
       })}

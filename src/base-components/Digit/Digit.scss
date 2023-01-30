@@ -9,25 +9,25 @@
   position: relative;
 }
 
-.d1 {
+.d1Trapezoid {
   @include trapezoidTopBase;
   left: 4%;
   top: 0;
 }
 
-.d2 {
+.d2Trapezoid {
   @include trapezoidLeftBase;
   top: 0;
   left: 0;
 }
 
-.d3 {
+.d3Trapezoid {
   @include trapezoidRightBase;
   top: 0;
   right: 0;
 }
 
-.d4 {
+.d4Trapezoid {
   position: absolute;
   border-right: 18px solid transparent;
   border-left: 18px solid transparent;
@@ -41,7 +41,7 @@
   padding: 18%;
 }
 
-.d4:after {
+.d4Trapezoid:after {
   content: "";
   position: absolute;
   border-right: 18px solid transparent;
@@ -55,19 +55,19 @@
   left: -30%;
 }
 
-.d5 {
+.d5Trapezoid {
   @include trapezoidLeftBase;
   bottom: 0;
   left: 0;
 }
 
-.d6 {
+.d6Trapezoid {
   @include trapezoidRightBase;
   bottom: 0;
   right: 0;
 }
 
-.d7 {
+.d7Trapezoid {
   @include trapezoidBottomBase;
   bottom: 0;
   left: 4%;
