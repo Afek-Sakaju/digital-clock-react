@@ -9,13 +9,12 @@ export function Digit({ value }) {
       {trapezoids.map((divNumber, index) => {
         const isActive = activeLinesByNumber[value].includes(divNumber);
 
+        console.log(`number:${value}, div: ${divNumber} is:${isActive}`);
         return (
           <div
             key={index}
             className={
-              isActive
-                ? `d${divNumber}Shape`
-                : `passive d${divNumber}Shape`
+              isActive ? `d${divNumber}Shape` : `passive d${divNumber}Shape`
             }
           ></div>
         );

@@ -28,7 +28,7 @@ export function DigitsClock({
           second: "numeric",
         })
       );
-    }, 120000); // return to 1000
+    }, 1000);
 
     return () => clearInterval(timerInterval);
   }, []);

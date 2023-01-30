@@ -15,7 +15,7 @@
 
 .d2Shape {
   @include trapezoidLeftBase;
-  bottom: 0;
+  top: 0;
 }
 
 .d3Shape {
@@ -31,7 +31,7 @@
 
 .d5Shape {
   @include trapezoidLeftBase;
-  top: 0;
+  bottom: 0;
 }
 
 .d6Shape {
