@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import { daysArray } from "../../consts";
+import { daysArray } from "../../utils/consts";
 import { DayText } from "../../base-components";
 
 export function DaysGroup({ currentDay }) {

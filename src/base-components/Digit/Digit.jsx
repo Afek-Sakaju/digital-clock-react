@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Digit.scss";
-import { activeLinesByNumber, trapezoids } from "../../consts";
+import { activeLinesByNumber, trapezoids } from "../../utils/consts";
 
 export function Digit({ value }) {
   return (
