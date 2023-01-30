@@ -1,4 +1,4 @@
-$passive-opacity: 0.15;
+@import "../../utils/variables.scss";
 
 @mixin trapezoidTopBase {
   position: absolute;

@@ -5,6 +5,7 @@ import "./MainDigitalClock.scss";
 
 export function MainDigitalClock({ height, width }) {
   const [ampmState, setAmPmState] = useState("AM");
+
   const [localeTime, setLocaleTime] = useState(
     new Date().toLocaleDateString("en-US", {
       weekday: "short",
@@ -31,7 +32,12 @@ export function MainDigitalClock({ height, width }) {
           setCurrentDay={setCurrentDay}
         />
         <div className="ampmContainer">
-          <div className="ampmText">{ampmState}</div>
+          <div className={ampmState === "AM" ? "ampmText" : "ampmText passive"}>
+            AM
+          </div>
+          <div className={ampmState === "PM" ? "ampmText" : "ampmText passive"}>
+            PM
+          </div>
         </div>
       </div>
     </div>

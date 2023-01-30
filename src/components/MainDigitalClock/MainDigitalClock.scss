@@ -1,3 +1,5 @@
+@import "../../utils/variables.scss";
+
 .mainContainer {
   border: 40px rgba(128, 128, 128, 0.5) solid;
   border-radius: 65px;
@@ -26,11 +28,17 @@
 }
 
 .ampmText {
-  font-size: 2rem;
+  font-size: 230%;
   font-weight: bold;
   position: absolute;
   right: 0;
-  top: -13.5rem;
+  top: -1200%;
+  &:last-child {
+    top: -1000%;
+  }
+  &.passive {
+    opacity: $passive-opacity;
+  }
 }
 
 .daysContainer {
