@@ -9,66 +9,38 @@
   position: relative;
 }
 
-.d1Trapezoid {
+.d1Shape {
   @include trapezoidTopBase;
-  left: 4%;
-  top: 0;
 }
 
-.d2Trapezoid {
+.d2Shape {
   @include trapezoidLeftBase;
-  top: 0;
-  left: 0;
+  bottom: 0;
 }
 
-.d3Trapezoid {
+.d3Shape {
   @include trapezoidRightBase;
   top: 0;
   right: 0;
 }
 
-.d4Trapezoid {
-  position: absolute;
-  border-right: 18px solid transparent;
-  border-left: 18px solid transparent;
-  border-top: 18px solid;
-  &.passive {
-    opacity: $passive-opacity;
-  }
-  width: 20%;
-  left: 5%;
-  top: 50%;
-  padding: 18%;
+.d4Shape {
+  @include hexagon;
+  top: 42%;
 }
 
-.d4Trapezoid:after {
-  content: "";
-  position: absolute;
-  border-right: 18px solid transparent;
-  border-left: 18px solid transparent;
-  border-bottom: 18px solid;
-  &.passive {
-    opacity: $passive-opacity;
-  }
-  width: 100%;
-  top: -87%;
-  left: -30%;
-}
-
-.d5Trapezoid {
+.d5Shape {
   @include trapezoidLeftBase;
-  bottom: 0;
-  left: 0;
+  top: 0;
 }
 
-.d6Trapezoid {
+.d6Shape {
   @include trapezoidRightBase;
   bottom: 0;
   right: 0;
 }
 
-.d7Trapezoid {
+.d7Shape {
   @include trapezoidBottomBase;
   bottom: 0;
-  left: 4%;
 }
