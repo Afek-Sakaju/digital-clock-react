@@ -5,11 +5,10 @@ import { activeLinesByNumber, trapezoids } from "../../consts";
 
 export function Digit({ value }) {
   return (
-    <div className="digitsContainer">
+    <div className="digitContainer">
       {trapezoids.map((divNumber, index) => {
         const isActive = activeLinesByNumber[value].includes(divNumber);
 
-        console.log(`number:${value}, div: ${divNumber} is:${isActive}`);
         return (
           <div
             key={index}
