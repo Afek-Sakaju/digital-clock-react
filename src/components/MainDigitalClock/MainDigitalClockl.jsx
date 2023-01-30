@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { DigitsClock, DaysGroup } from "../index";
 import "./MainDigitalClock.scss";
 
-export function MainDigitalClock() {
+export function MainDigitalClock({ height, width }) {
   const [ampmState, setAmPmState] = useState("AM");
   const [localeTime, setLocaleTime] = useState(
     new Date().toLocaleDateString("en-US", {
@@ -15,7 +16,7 @@ export function MainDigitalClock() {
   const [currentDay, setCurrentDay] = useState(localeTime.split(" ")[0]);
 
   return (
-    <div className="mainContainer" style={{ height: "450px", width: "1100px" }}>
+    <div className="mainContainer" style={{ height, width }}>
       <div className="componentContainer">
         <div className="daysContainer">
           <DaysGroup currentDay={currentDay} />
@@ -36,3 +37,13 @@ export function MainDigitalClock() {
     </div>
   );
 }
+
+MainDigitalClock.propTypes = {
+  height: PropTypes.string,
+  width: PropTypes.string,
+};
+
+MainDigitalClock.defaultProps = {
+  height: "450px",
+  width: "1100px",
+};
