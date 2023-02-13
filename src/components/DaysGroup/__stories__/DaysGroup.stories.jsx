@@ -1,22 +1,25 @@
 import React from "react";
 import { DaysGroup } from "../DaysGroup";
+import { daysArray } from "../../../utils";
 
 export default {
   title: "base-components/DaysGroup",
   component: DaysGroup,
-  decorators:
-  [
+  argTypes: {
+    currentDay: { control: "inline-radio", options: daysArray },
+  },
+  decorators: [
     (Story) => (
       <div
         style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          boxSizing: 'borderBox',
-          flexWrap: 'wrap',
-          height: '150px',
-          width: '1500px',
-          gap: '5%',
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          boxSizing: "borderBox",
+          flexWrap: "wrap",
+          height: "150px",
+          width: "1000px",
+          gap: "5%",
         }}
       >
         <Story />

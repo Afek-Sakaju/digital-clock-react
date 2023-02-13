@@ -1,5 +1,6 @@
 import React from "react";
 import { MainDigitalClock } from "../MainDigitalClockl";
+import { daysArray } from "../../../utils";
 
 export default {
   title: "base-components/MainDigitalClock",
@@ -62,10 +63,11 @@ tooMuchWidth.args = {
   width: "100%",
 };
 
-//export const tooMuchWidth = <MainDigitalClock height={"100px"} width={"2000px"} />; NOT WORKING
+// export const tooMuchWidth = <MainDigitalClock height={"100px"} width={"2000px"} />;
+// the line above is not working
 
 export const Custom = Template.bind({});
-Custom.args = {
-  height: "60%",
-  width: "70%",
+Custom.argTypes = {
+  height: { control: { type: "number", min: 100, max: 5000, step: 50 } },
+  width: { control: { type: "number", min: 100, max: 5000, step: 50 } },
 };
