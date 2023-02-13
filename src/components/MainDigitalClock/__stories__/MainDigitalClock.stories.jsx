@@ -1,10 +1,13 @@
 import React from "react";
 import { MainDigitalClock } from "../MainDigitalClockl";
-import { daysArray } from "../../../utils";
 
 export default {
   title: "base-components/MainDigitalClock",
   component: MainDigitalClock,
+  argTypes: {
+    height: { control: { type: "text" } },
+    width: { control: { type: "text" } },
+  },
   decorators: [
     (Story) => (
       <div
@@ -67,7 +70,7 @@ tooMuchWidth.args = {
 // the line above is not working
 
 export const Custom = Template.bind({});
-Custom.argTypes = {
-  height: { control: { type: "number", min: 100, max: 5000, step: 50 } },
-  width: { control: { type: "number", min: 100, max: 5000, step: 50 } },
+Custom.args = {
+  height: "50%",
+  width: "80%",
 };

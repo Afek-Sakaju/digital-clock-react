@@ -5,6 +5,10 @@ import { daysArray } from "../../../utils";
 export default {
   title: "base-components/DayText",
   component: DayText,
+  argTypes: {
+    label: { control: { type: "text" } },
+    currentDay: { control: { type: "text" } },
+  },
   decorators: [
     (Story) => (
       <div
@@ -61,6 +65,9 @@ ShortLabelPassive.args = {
 };
 
 export const SelectDay = Template.bind({});
+SelectDay.args = {
+  currentDay: "sun",
+};
 SelectDay.argTypes = {
   label: { control: "inline-radio", options: daysArray },
   currentDay: { control: "inline-radio", options: daysArray },

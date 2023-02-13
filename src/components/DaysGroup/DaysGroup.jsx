@@ -15,5 +15,5 @@ DaysGroup.propTypes = {
 };
 
 DaysGroup.propTypes = {
-  currentDay: undefined,
+  currentDay: 'noDay',
 };

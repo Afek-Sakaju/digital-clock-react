@@ -4,6 +4,11 @@ import { DigitsClock } from "../DigitsClock";
 export default {
   title: "base-components/DigitsClock",
   component: DigitsClock,
+  /* fill :
+  argTypes: {
+    height: { control: { type: "text" } },
+    width: { control: { type: "text" } },
+  }, */
   decorators: [
     (Story) => (
       <div
