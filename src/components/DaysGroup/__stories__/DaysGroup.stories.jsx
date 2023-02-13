@@ -3,7 +3,7 @@ import { DaysGroup } from "../DaysGroup";
 import { daysArray } from "../../../utils";
 
 export default {
-  title: "base-components/DaysGroup",
+  title: "components/DaysGroup",
   component: DaysGroup,
   argTypes: {
     currentDay: { control: "inline-radio", options: daysArray },

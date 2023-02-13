@@ -2,7 +2,7 @@ import React from "react";
 import { DigitsClock } from "../DigitsClock";
 
 export default {
-  title: "base-components/DigitsClock",
+  title: "components/DigitsClock",
   component: DigitsClock,
   /* fill :
   argTypes: {

@@ -2,7 +2,7 @@ import React from "react";
 import { MainDigitalClock } from "../MainDigitalClockl";
 
 export default {
-  title: "base-components/MainDigitalClock",
+  title: "components/MainDigitalClock",
   component: MainDigitalClock,
   argTypes: {
     height: { control: { type: "text" } },
