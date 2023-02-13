@@ -4,6 +4,25 @@ import { DaysGroup } from "../DaysGroup";
 export default {
   title: "base-components/DaysGroup",
   component: DaysGroup,
+  decorators:
+  [
+    (Story) => (
+      <div
+        style={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          boxSizing: 'borderBox',
+          flexWrap: 'wrap',
+          height: '150px',
+          width: '1500px',
+          gap: '5%',
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 const Template = (args) => <DaysGroup {...args} />;

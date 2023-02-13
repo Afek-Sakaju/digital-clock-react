@@ -22,7 +22,6 @@ export function MainDigitalClock({ height, width }) {
         <div className="daysContainer">
           <DaysGroup currentDay={currentDay} />
         </div>
-
         <DigitsClock
           updateAmPm={setAmPmState}
           ampmState={ampmState}

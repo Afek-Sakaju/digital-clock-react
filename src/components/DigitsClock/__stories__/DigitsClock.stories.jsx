@@ -4,6 +4,22 @@ import { DigitsClock } from "../DigitsClock";
 export default {
   title: "base-components/DigitsClock",
   component: DigitsClock,
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          boxSizing: "borderBox",
+          height: "700px",
+          width: "1500px",
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 const Template = (args) => <DigitsClock {...args} />;
