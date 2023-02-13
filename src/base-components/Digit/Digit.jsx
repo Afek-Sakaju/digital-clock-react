@@ -27,5 +27,5 @@ Digit.propTypes = {
 };
 
 Digit.defaultProps = {
-  value: 8,
+  value: 5,
 };

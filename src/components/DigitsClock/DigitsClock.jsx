@@ -63,12 +63,12 @@ export function DigitsClock({
 }
 
 DigitsClock.propTypes = {
-  updateAmPm: PropTypes.func,
-  ampmState: PropTypes.string,
-  localeTime: PropTypes.string,
-  setLocaleTime: PropTypes.func,
-  currentDay: PropTypes.string,
-  setCurrentDay: PropTypes.func,
+  updateAmPm: PropTypes.func.isRequired,
+  ampmState: PropTypes.string.isRequired,
+  localeTime: PropTypes.string.isRequired,
+  setLocaleTime: PropTypes.func.isRequired,
+  currentDay: PropTypes.string.isRequired,
+  setCurrentDay: PropTypes.func.isRequired,
 };
 
 //DayText.defaultProps = {};

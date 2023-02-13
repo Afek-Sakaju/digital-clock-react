@@ -13,3 +13,7 @@ export function DaysGroup({ currentDay }) {
 DaysGroup.propTypes = {
   currentDay: PropTypes.string,
 };
+
+DaysGroup.propTypes = {
+  currentDay: undefined,
+};
