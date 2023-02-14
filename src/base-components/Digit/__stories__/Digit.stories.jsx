@@ -1,6 +1,13 @@
 import React from "react";
 import { Digit } from "../Digit";
 
+const digitBasicStyle = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  border: "3px red solid",
+};
+
 export default {
   title: "base-components/Digit",
   component: Digit,
@@ -10,6 +17,20 @@ export default {
       options: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
     },
   },
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          ...digitBasicStyle,
+          width: "95vw",
+          height: "95vh",
+          border: "unset",
+        }}
+      >
+        <Story />
+      </div>
+    ),
+  ],
 };
 
 const Template = (args) => <Digit {...args} />;
@@ -20,29 +41,9 @@ Default.decorators = [
   (Story) => (
     <div
       style={{
+        ...digitBasicStyle,
         width: "500px",
         height: "200px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Story />
-    </div>
-  ),
-];
-
-export const CustomDigit = Template.bind({});
-CustomDigit.args = {};
-CustomDigit.decorators = [
-  (Story) => (
-    <div
-      style={{
-        width: "500px",
-        height: "200px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
       }}
     >
       <Story />
@@ -55,11 +56,9 @@ smallDecorator.decorators = [
   (Story) => (
     <div
       style={{
+        ...digitBasicStyle,
         width: "300px",
         height: "100px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
       }}
     >
       <Story />
@@ -72,11 +71,9 @@ mediumDecorator.decorators = [
   (Story) => (
     <div
       style={{
+        ...digitBasicStyle,
         width: "600px",
         height: "200px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
       }}
     >
       <Story />
@@ -89,11 +86,9 @@ bigDecorator.decorators = [
   (Story) => (
     <div
       style={{
+        ...digitBasicStyle,
         width: "1000px",
         height: "400px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
       }}
     >
       <Story />
@@ -106,11 +101,9 @@ tooMuchHeight.decorators = [
   (Story) => (
     <div
       style={{
-        width: "450px",
+        ...digitBasicStyle,
+        width: "300px",
         height: "600px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
       }}
     >
       <Story />
@@ -123,11 +116,25 @@ tooMuchWidth.decorators = [
   (Story) => (
     <div
       style={{
+        ...digitBasicStyle,
         width: "1200px",
         height: "50px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+      }}
+    >
+      <Story />
+    </div>
+  ),
+];
+
+export const Custom = Template.bind({});
+Custom.decorators = [
+  (Story) => (
+    <div
+      style={{
+        ...digitBasicStyle,
+        width: "700px",
+        height: "250px",
+        border: "unset",
       }}
     >
       <Story />

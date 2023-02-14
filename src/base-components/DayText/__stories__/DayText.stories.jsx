@@ -2,22 +2,26 @@ import React from "react";
 import { DayText } from "../DayText";
 import { daysArray } from "../../../utils";
 
+const exampleLabels = ["example-of-long-text", "mediumText", "short", "txt"];
+
+const dayTextBasicStyle = {
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
+  border: "3px red solid",
+};
+
 export default {
   title: "base-components/DayText",
   component: DayText,
-  argTypes: {
-    label: { control: { type: "text" } },
-    currentDay: { control: { type: "text" } },
-  },
   decorators: [
     (Story) => (
       <div
         style={{
-          width: "97vw",
-          height: "98vh",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
+          ...dayTextBasicStyle,
+          width: "95vw",
+          height: "95vh",
+          border: "unset",
         }}
       >
         <Story />
@@ -28,46 +32,159 @@ export default {
 
 const Template = (args) => <DayText {...args} />;
 
-export const Default = Template.bind({});
-Default.args = {};
+export const Default = () => <DayText />;
 
-export const longLabelActive = Template.bind({});
-longLabelActive.args = {
-  label: "long-text-example",
-  currentDay: "long-text-example",
+export const TinyDecorator = Template.bind({});
+TinyDecorator.argTypes = {
+  label: {
+    control: "inline-radio",
+    options: exampleLabels,
+  },
+  currentDay: {
+    control: "inline-radio",
+    options: exampleLabels,
+  },
 };
+TinyDecorator.decorators = [
+  (Story) => (
+    <div
+      style={{
+        ...dayTextBasicStyle,
+        width: "5%",
+        height: "5%",
+      }}
+    >
+      <Story />
+    </div>
+  ),
+];
 
-export const longLabelPassive = Template.bind({});
-longLabelPassive.args = {
-  label: "long-text-example",
+export const SmallDecorator = Template.bind({});
+SmallDecorator.argTypes = {
+  label: {
+    control: "inline-radio",
+    options: exampleLabels,
+  },
+  currentDay: {
+    control: "inline-radio",
+    options: exampleLabels,
+  },
 };
+SmallDecorator.decorators = [
+  (Story) => (
+    <div
+      style={{
+        ...dayTextBasicStyle,
+        width: "10%",
+        height: "10%",
+      }}
+    >
+      <Story />
+    </div>
+  ),
+];
 
-export const MediumLabelActive = Template.bind({});
-MediumLabelActive.args = {
-  label: "wednesday",
-  currentDay: "wednesday",
+export const MediumDecorator = Template.bind({});
+MediumDecorator.argTypes = {
+  label: {
+    control: "inline-radio",
+    options: exampleLabels,
+  },
+  currentDay: {
+    control: "inline-radio",
+    options: exampleLabels,
+  },
 };
+MediumDecorator.decorators = [
+  (Story) => (
+    <div
+      style={{
+        ...dayTextBasicStyle,
+        width: "20%",
+        height: "20%",
+      }}
+    >
+      <Story />
+    </div>
+  ),
+];
 
-export const MediumLabelPassive = Template.bind({});
-MediumLabelPassive.args = {
-  label: "wednesday",
+export const LargeDecorator = Template.bind({});
+LargeDecorator.argTypes = {
+  label: {
+    control: "inline-radio",
+    options: exampleLabels,
+  },
+  currentDay: {
+    control: "inline-radio",
+    options: exampleLabels,
+  },
 };
+LargeDecorator.decorators = [
+  (Story) => (
+    <div
+      style={{
+        ...dayTextBasicStyle,
+        width: "30%",
+        height: "30%",
+      }}
+    >
+      <Story />
+    </div>
+  ),
+];
 
-export const ShortLabelActive = Template.bind({});
-ShortLabelActive.args = {
-  label: "mon",
-  currentDay: "mon",
+export const TooHighDecorator = Template.bind({});
+TooHighDecorator.argTypes = {
+  label: {
+    control: "inline-radio",
+    options: exampleLabels,
+  },
+  currentDay: {
+    control: "inline-radio",
+    options: exampleLabels,
+  },
 };
+TooHighDecorator.decorators = [
+  (Story) => (
+    <div
+      style={{
+        ...dayTextBasicStyle,
+        width: "5%",
+        height: "50%",
+      }}
+    >
+      <Story />
+    </div>
+  ),
+];
 
-export const ShortLabelPassive = Template.bind({});
-ShortLabelPassive.args = {
-  label: "mon",
+export const TooWideDecorator = Template.bind({});
+TooWideDecorator.argTypes = {
+  label: {
+    control: "inline-radio",
+    options: exampleLabels,
+  },
+  currentDay: {
+    control: "inline-radio",
+    options: exampleLabels,
+  },
 };
+TooWideDecorator.decorators = [
+  (Story) => (
+    <div
+      style={{
+        ...dayTextBasicStyle,
+        width: "70%",
+        height: "3%",
+      }}
+    >
+      <Story />
+    </div>
+  ),
+];
 
 export const SelectDay = Template.bind({});
-SelectDay.args = {
-  currentDay: "sun",
-};
 SelectDay.argTypes = {
   label: { control: "inline-radio", options: daysArray },
   currentDay: { control: "inline-radio", options: daysArray },
