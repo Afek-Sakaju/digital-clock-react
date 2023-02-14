@@ -14,6 +14,6 @@ DaysGroup.propTypes = {
   currentDay: PropTypes.string,
 };
 
-DaysGroup.propTypes = {
-  currentDay: 'noDay',
+DaysGroup.defaultProps = {
+  currentDay: "noDay",
 };
