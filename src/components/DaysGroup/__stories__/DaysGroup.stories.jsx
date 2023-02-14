@@ -5,9 +5,6 @@ import { daysArray } from "../../../utils";
 export default {
   title: "components/DaysGroup",
   component: DaysGroup,
-  argTypes: {
-    currentDay: { control: "inline-radio", options: daysArray },
-  },
   decorators: [
     (Story) => (
       <div
@@ -41,4 +38,9 @@ Sunday.args = {
 export const Monday = Template.bind({});
 Monday.args = {
   currentDay: "mon",
+};
+
+export const Custom = Template.bind({});
+Custom.argTypes = {
+  currentDay: { control: "inline-radio", options: daysArray },
 };

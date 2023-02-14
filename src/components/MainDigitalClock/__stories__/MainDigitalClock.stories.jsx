@@ -60,13 +60,15 @@ tooMuchHeight.args = {
   width: "20%",
 };
 
-export const tooMuchWidth = Template.bind({});
+/*export const tooMuchWidth = Template.bind({});
 tooMuchWidth.args = {
   height: "20%",
   width: "100%",
-};
+};*/
 
-// export const tooMuchWidth = <MainDigitalClock height={"100px"} width={"2000px"} />;
+export const tooMuchWidth = (
+  <MainDigitalClock height={"100px"} width={"2000px"} />
+);
 // the line above is not working
 
 export const Custom = Template.bind({});
