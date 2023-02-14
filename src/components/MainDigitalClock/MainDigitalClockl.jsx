@@ -1,19 +1,13 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { DigitsClock, DaysGroup } from "../index";
+import { ManagedDigitsClock, DaysGroup } from "../index";
 import "./MainDigitalClock.scss";
+import { getDateFormat } from "../../utils";
 
 export function MainDigitalClock({ height, width }) {
   const [ampmState, setAmPmState] = useState("AM");
 
-  const [localeTime, setLocaleTime] = useState(
-    new Date().toLocaleDateString("en-US", {
-      weekday: "short",
-      hour: "numeric",
-      minute: "numeric",
-      second: "numeric",
-    })
-  );
+  const [localeTime, setLocaleTime] = useState(getDateFormat());
   const [currentDay, setCurrentDay] = useState(localeTime.split(" ")[0]);
 
   return (
@@ -22,7 +16,7 @@ export function MainDigitalClock({ height, width }) {
         <div className="daysContainer">
           <DaysGroup currentDay={currentDay} />
         </div>
-        <DigitsClock
+        <ManagedDigitsClock
           updateAmPm={setAmPmState}
           ampmState={ampmState}
           localeTime={localeTime}

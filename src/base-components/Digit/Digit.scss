@@ -1,10 +1,10 @@
 @import "./mixings.scss";
 
-.digitContainer {
+.digit-container {
   display: flex;
   box-sizing: border-box;
-  height: 90%;
-  width: 15%;
+  height: 100%;
+  width: 100%;
   border: 5px rgba(0, 0, 0, 0.03) solid;
   position: relative;
 }

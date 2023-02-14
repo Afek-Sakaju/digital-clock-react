@@ -1,3 +1,3 @@
 export * from "./DaysGroup/DaysGroup";
-export * from "./DigitsClock/DigitsClock";
+export * from "./ManagedDigitsClock/ManagedDigitsClock";
 export * from "./MainDigitalClock/MainDigitalClockl";

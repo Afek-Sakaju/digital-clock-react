@@ -21,10 +21,10 @@ export default {
     (Story) => (
       <div
         style={{
-          ...digitBasicStyle,
-          width: "95vw",
-          height: "95vh",
-          border: "unset",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "96vh",
         }}
       >
         <Story />
@@ -66,67 +66,19 @@ smallDecorator.decorators = [
   ),
 ];
 
-export const mediumDecorator = Template.bind({});
-mediumDecorator.decorators = [
-  (Story) => (
-    <div
-      style={{
-        ...digitBasicStyle,
-        width: "600px",
-        height: "200px",
-      }}
-    >
-      <Story />
+export const Custom = (args) => {
+  return (
+    <div style={{ width: `${args.width}px`, height: `${args.height}px` }}>
+      <Digit {...args} />
     </div>
-  ),
-];
+  );
+};
 
-export const bigDecorator = Template.bind({});
-bigDecorator.decorators = [
-  (Story) => (
-    <div
-      style={{
-        ...digitBasicStyle,
-        width: "1000px",
-        height: "400px",
-      }}
-    >
-      <Story />
-    </div>
-  ),
-];
+Custom.args = {
+  width: 250,
+  height: 150,
+};
 
-export const tooMuchHeight = Template.bind({});
-tooMuchHeight.decorators = [
-  (Story) => (
-    <div
-      style={{
-        ...digitBasicStyle,
-        width: "300px",
-        height: "600px",
-      }}
-    >
-      <Story />
-    </div>
-  ),
-];
-
-export const tooMuchWidth = Template.bind({});
-tooMuchWidth.decorators = [
-  (Story) => (
-    <div
-      style={{
-        ...digitBasicStyle,
-        width: "1200px",
-        height: "50px",
-      }}
-    >
-      <Story />
-    </div>
-  ),
-];
-
-export const Custom = Template.bind({});
 Custom.decorators = [
   (Story) => (
     <div

@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "./Digit.scss";
-import { activeLinesByNumber, trapezoids } from "../../utils/consts";
+import { activeLinesByNumber, trapezoids } from "../../utils";
 
 export function Digit({ value }) {
   return (
-    <div className="digitContainer">
+    <div className="digit-container">
       {trapezoids.map((divNumber, index) => {
         const isActive = activeLinesByNumber[value].includes(divNumber);
 
@@ -15,7 +15,7 @@ export function Digit({ value }) {
             className={
               isActive ? `d${divNumber}Shape` : `passive d${divNumber}Shape`
             }
-          ></div>
+          />
         );
       })}
     </div>
@@ -27,5 +27,5 @@ Digit.propTypes = {
 };
 
 Digit.defaultProps = {
-  value: 5,
+  value: 0,
 };
