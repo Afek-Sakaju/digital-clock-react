@@ -98,10 +98,3 @@ Custom.argTypes = {
   currentDay: { control: false },
   localeTime: { control: false },
 };
-
-const Template = (args) => <ManagedDigitsClock {...args} />;
-
-/*
-export const Default = Template.bind({});
-Default.args = {};
-*/
