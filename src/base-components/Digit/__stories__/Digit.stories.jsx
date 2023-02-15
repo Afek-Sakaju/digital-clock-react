@@ -1,22 +1,9 @@
 import React from "react";
 import { Digit } from "../Digit";
 
-const digitBasicStyle = {
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  border: "3px red solid",
-};
-
 export default {
   title: "base-components/Digit",
   component: Digit,
-  argTypes: {
-    value: {
-      control: "inline-radio",
-      options: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
-    },
-  },
   decorators: [
     (Story) => (
       <div
@@ -33,16 +20,15 @@ export default {
   ],
 };
 
-const Template = (args) => <Digit {...args} />;
-
-export const Default = Template.bind({});
-Default.args = {};
+export const Default = () => <Digit />;
 Default.decorators = [
   (Story) => (
     <div
       style={{
-        ...digitBasicStyle,
-        width: "500px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100px",
         height: "200px",
       }}
     >
@@ -51,42 +37,50 @@ Default.decorators = [
   ),
 ];
 
-export const smallDecorator = Template.bind({});
-smallDecorator.decorators = [
-  (Story) => (
+const Template = (args) => <Digit {...args} />;
+
+export const AdjustableSize = (props) => {
+  return (
     <div
       style={{
-        ...digitBasicStyle,
-        width: "300px",
-        height: "100px",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        border: "3px red solid",
+        width: `${props.width}px` ?? "50px",
+        height: `${props.height}px` ?? "50px",
       }}
     >
-      <Story />
-    </div>
-  ),
-];
-
-export const Custom = (args) => {
-  return (
-    <div style={{ width: `${args.width}px`, height: `${args.height}px` }}>
-      <Digit {...args} />
+      <Digit value={6} />
     </div>
   );
 };
-
-Custom.args = {
-  width: 250,
-  height: 150,
+AdjustableSize.argTypes = {
+  width: { control: { type: "number", min: 20, max: 3000, step: 30 } },
+  height: { control: { type: "number", min: 30, max: 3000, step: 30 } },
+  value: { control: false },
+};
+AdjustableSize.args = {
+  width: 100,
+  height: 100,
 };
 
+export const Custom = Template.bind({});
+Custom.argTypes = {
+  value: {
+    control: "inline-radio",
+    options: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  },
+};
 Custom.decorators = [
   (Story) => (
     <div
       style={{
-        ...digitBasicStyle,
-        width: "700px",
-        height: "250px",
-        border: "unset",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100px",
+        height: "200px",
       }}
     >
       <Story />

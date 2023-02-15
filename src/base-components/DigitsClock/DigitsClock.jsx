@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import { Digit } from "../Digit/Digit";
 import "./DigitsClock.scss";

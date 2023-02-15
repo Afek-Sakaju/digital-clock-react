@@ -21,34 +21,37 @@ export default {
   ],
 };
 
-const Template = (args) => <MainDigitalClock {...args} />;
-
 export const Default = () => <MainDigitalClock />;
+Default.decorators = [
+  (Story) => (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "400px",
+        width: "800px",
+      }}
+    >
+      <Story />
+    </div>
+  ),
+];
 
-export const TinySize = () => <MainDigitalClock height={"5%"} width={"10%"} />;
-
-export const SmallSize = () => (
-  <MainDigitalClock height={"20%"} width={"30%"} />
+export const Custom = (props) => (
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: `${props.height ?? 200}px`,
+      width: `${props.width ?? 600}px`,
+    }}
+  >
+    <MainDigitalClock height={"100%"} width={"100%"} />
+  </div>
 );
-
-export const MediumSize = () => (
-  <MainDigitalClock height={"30%"} width={"40%"} />
-);
-
-export const LargeSize = () => (
-  <MainDigitalClock height={"50%"} width={"70%"} />
-);
-
-export const TooMuchHeight = () => (
-  <MainDigitalClock height={"600px"} width={"100px"} />
-);
-
-export const TooMuchWidth = () => (
-  <MainDigitalClock height={"100px"} width={"2000px"} />
-);
-
-export const Custom = Template.bind({});
 Custom.argTypes = {
-  height: { control: { type: "text" } },
-  width: { control: { type: "text" } },
+  height: { control: { type: "number", min: 100, max: 3000, step: 50 } },
+  width: { control: { type: "number", min: 100, max: 4000, step: 50 } },
 };

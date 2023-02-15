@@ -2,14 +2,11 @@ import React from "react";
 import { DaysGroup } from "../DaysGroup";
 import { daysArray } from "../../../utils";
 
-const daysGroupBasicStyle = {
+const basicStyle = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
-  boxSizing: "borderBox",
   flexWrap: "wrap",
-  gap: "5%",
-  border: "2px red solid",
 };
 
 export default {
@@ -19,10 +16,10 @@ export default {
     (Story) => (
       <div
         style={{
-          ...daysGroupBasicStyle,
-          height: "150px",
-          width: "1000px",
-          border: "unset",
+          ...basicStyle,
+          flexWrap: "unset",
+          height: "95vh",
+          width: "95vw",
         }}
       >
         <Story />
@@ -34,15 +31,14 @@ export default {
 const Template = (args) => <DaysGroup {...args} />;
 
 export const Default = () => <DaysGroup />;
-
-export const TinyDecorator = () => <DaysGroup currentDay={"mon"} />;
-TinyDecorator.decorators = [
+Default.decorators = [
   (Story) => (
     <div
       style={{
-        ...daysGroupBasicStyle,
-        height: "50px",
-        width: "200px",
+        ...basicStyle,
+        height: "15%",
+        width: "50%",
+        gap: "5%",
       }}
     >
       <Story />
@@ -50,87 +46,42 @@ TinyDecorator.decorators = [
   ),
 ];
 
-export const SmallDecorator = () => <DaysGroup currentDay={"mon"} />;
-SmallDecorator.decorators = [
-  (Story) => (
+export const AdjustSize = (props) => {
+  return (
     <div
       style={{
-        ...daysGroupBasicStyle,
-        height: "100px",
-        width: "300px",
+        ...basicStyle,
+        height: `${props.height}px`,
+        width: `${props.width}px`,
+        border: "red solid 3px",
+        gap: "5%",
       }}
     >
-      <Story />
+      <DaysGroup currentDay={"mon"} />
     </div>
-  ),
-];
-
-export const MediumDecorator = () => <DaysGroup currentDay={"mon"} />;
-MediumDecorator.decorators = [
-  (Story) => (
-    <div
-      style={{
-        ...daysGroupBasicStyle,
-        height: "150px",
-        width: "600px",
-      }}
-    >
-      <Story />
-    </div>
-  ),
-];
-
-export const LargeDecorator = () => <DaysGroup currentDay={"mon"} />;
-LargeDecorator.decorators = [
-  (Story) => (
-    <div
-      style={{
-        ...daysGroupBasicStyle,
-        height: "300px",
-        width: "1000px",
-      }}
-    >
-      <Story />
-    </div>
-  ),
-];
-
-export const TooHighDecorator = () => <DaysGroup currentDay={"mon"} />;
-TooHighDecorator.decorators = [
-  (Story) => (
-    <div
-      style={{
-        ...daysGroupBasicStyle,
-        height: "500px",
-        width: "100px",
-      }}
-    >
-      <Story />
-    </div>
-  ),
-];
-
-export const TooWideDecorator = () => <DaysGroup currentDay={"mon"} />;
-TooWideDecorator.decorators = [
-  (Story) => (
-    <div
-      style={{
-        ...daysGroupBasicStyle,
-        height: "50px",
-        width: "1200px",
-      }}
-    >
-      <Story />
-    </div>
-  ),
-];
-
-export const SelectDay = Template.bind({});
-SelectDay.argTypes = {
-  currentDay: { control: "inline-radio", options: daysArray },
+  );
+};
+AdjustSize.argTypes = {
+  width: { control: { type: "number", min: 50, max: 4000, step: 50 } },
+  height: { control: { type: "number", min: 50, max: 3000, step: 50 } },
+  currentDay: { control: false },
 };
 
 export const Custom = Template.bind({});
 Custom.argTypes = {
-  currentDay: { control: { type: "text" } },
+  currentDay: { control: "inline-radio", options: daysArray },
 };
+Custom.decorators = [
+  (Story) => (
+    <div
+      style={{
+        ...basicStyle,
+        height: "15%",
+        width: "50%",
+        gap: "5%",
+      }}
+    >
+      <Story />
+    </div>
+  ),
+];

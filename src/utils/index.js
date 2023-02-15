@@ -1,7 +1,7 @@
 export * from "./consts";
 
-export function getDateFormat(data = undefined) {
-  return new Date(data ?? Date.now()).toLocaleDateString("en-US", {
+export function getCurrentDateFormat() {
+  return new Date(Date.now()).toLocaleDateString("en-US", {
     weekday: "short",
     hour: "numeric",
     minute: "numeric",

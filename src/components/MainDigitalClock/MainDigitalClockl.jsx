@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { ManagedDigitsClock, DaysGroup } from "../index";
 import "./MainDigitalClock.scss";
-import { getDateFormat } from "../../utils";
+import { getCurrentDateFormat } from "../../utils";
 
 export function MainDigitalClock({ height, width }) {
   const [ampmState, setAmPmState] = useState("AM");
-
-  const [localeTime, setLocaleTime] = useState(getDateFormat());
+  const [localeTime, onTimeChange] = useState(getCurrentDateFormat());
   const [currentDay, setCurrentDay] = useState(localeTime.split(" ")[0]);
 
   return (
@@ -18,11 +17,11 @@ export function MainDigitalClock({ height, width }) {
         </div>
         <ManagedDigitsClock
           updateAmPm={setAmPmState}
-          ampmState={ampmState}
           localeTime={localeTime}
-          setLocaleTime={setLocaleTime}
+          onTimeChange={onTimeChange}
           currentDay={currentDay}
-          setCurrentDay={setCurrentDay}
+          onDayChange={setCurrentDay}
+          useInterval={true}
         />
         <div className="ampmContainer">
           <div className={ampmState === "AM" ? "ampmText" : "ampmText passive"}>
@@ -43,6 +42,6 @@ MainDigitalClock.propTypes = {
 };
 
 MainDigitalClock.defaultProps = {
-  height: "450px",
-  width: "1100px",
+  height: "100%",
+  width: "100%",
 };

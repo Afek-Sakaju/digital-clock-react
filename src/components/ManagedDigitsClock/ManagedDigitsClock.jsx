@@ -1,28 +1,25 @@
-import React, { useEffect, useState } from "react";
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import "./ManagedDigitsClock.scss";
 import { DigitsClock } from "../../base-components/DigitsClock/DigitsClock";
-import { getDateFormat } from "../../utils";
+import { getCurrentDateFormat } from "../../utils";
 
 export function ManagedDigitsClock({
   updateAmPm,
-  date,
-  setLocaleTime,
-  setCurrentDay,
-  useInterval = false,
-  // onDayChanged,
+  localeTime,
+  onTimeChange,
+  onDayChange,
+  useInterval,
 }) {
-  const [dateValue, setDateValue] = useState(date);
-  const [day, time, ampm] = getDateFormat(dateValue).split(" ");
+  const [day, time, ampm] = localeTime.split(" ");
 
   useEffect(() => {
     const timerInterval =
       useInterval &&
       setInterval(() => {
-        setDateValue((d) => {
-          const value = new Date(d).getTime() + 1000;
-          setLocaleTime?.(value);
-          return value;
+        onTimeChange?.((date) => {
+          date = getCurrentDateFormat();
+          return date;
         });
       }, 1000);
 
@@ -32,7 +29,7 @@ export function ManagedDigitsClock({
   }, [useInterval]);
 
   useEffect(() => {
-    setCurrentDay?.(day);
+    onDayChange?.(day);
   }, [day]);
 
   useEffect(() => {
@@ -43,12 +40,19 @@ export function ManagedDigitsClock({
 }
 
 ManagedDigitsClock.propTypes = {
-  updateAmPm: PropTypes.func.isRequired,
-  ampmState: PropTypes.string.isRequired,
-  localeTime: PropTypes.string.isRequired,
-  setLocaleTime: PropTypes.func.isRequired,
-  currentDay: PropTypes.string.isRequired,
-  setCurrentDay: PropTypes.func.isRequired,
+  updateAmPm: PropTypes.func,
+  localeTime: PropTypes.string,
+  onTimeChange: PropTypes.func,
+  currentDay: PropTypes.string,
+  onDayChange: PropTypes.func,
+  useInterval: PropTypes.bool,
 };
 
-//DayText.defaultProps = {};
+ManagedDigitsClock.defaultProps = {
+  updateAmPm: undefined,
+  onTimeChange: undefined,
+  currentDay: "noDay",
+  onDayChange: undefined,
+  useInterval: true,
+  localeTime: getCurrentDateFormat(),
+};
