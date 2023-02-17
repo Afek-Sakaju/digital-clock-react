@@ -9,14 +9,10 @@ export function Clock({ size }) {
   const [localeTime, onTimeChange] = useState(getCurrentDateFormat());
   const [currentDay, setCurrentDay] = useState(localeTime.split(" ")[0]);
 
-  const isSmallSize = size === "small";
-  const style = isSmallSize
-    ? { height: "100px", width: "150px" }
-    : { height: "130px", width: "250px" };
-  const ampmClass = isSmallSize ? "ampmText small" : "ampmText";
+  const sizeClassAddons = size === "small" ? "small" : "";
 
   return (
-    <div className="mainContainer" style={style}>
+    <div className={`mainContainer ${sizeClassAddons}`}>
       <div className="componentContainer">
         <div className="daysContainer">
           <DaysGroup currentDay={currentDay} />
@@ -29,17 +25,21 @@ export function Clock({ size }) {
           onDayChange={setCurrentDay}
           useInterval={true}
         />
-        <div className={`ampmContainer ${isSmallSize ? "small" : "normal"}`}>
+        <div className={`ampmContainer ${sizeClassAddons}`}>
           <div
             className={
-              ampmState === "AM" ? `${ampmClass}` : `${ampmClass} passive`
+              ampmState === "AM"
+                ? `ampmText ${sizeClassAddons}`
+                : `ampmText ${sizeClassAddons} passive`
             }
           >
             AM
           </div>
           <div
             className={
-              ampmState === "PM" ? `${ampmClass}` : `${ampmClass} passive`
+              ampmState === "PM"
+                ? `ampmText ${sizeClassAddons}`
+                : `ampmText ${sizeClassAddons} passive`
             }
           >
             PM
