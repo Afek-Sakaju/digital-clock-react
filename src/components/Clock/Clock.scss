@@ -1,9 +1,9 @@
 @import "../../utils/variables.scss";
 
 .mainContainer {
-  border: 40px rgba(128, 128, 128, 0.5) solid;
-  border-radius: 65px;
-  box-shadow: 0 0 0 7px black;
+  border: 10px rgba(128, 128, 128, 0.5) solid;
+  border-radius: 30px;
+  box-shadow: 0 0 0 3px black;
 }
 
 .componentContainer {
@@ -17,27 +17,41 @@
   border-radius: 25px;
   height: 100%;
   width: 100%;
-  gap: 2vh;
+  gap: 5%;
 }
 
 .ampmContainer {
   position: relative;
   box-sizing: border-box;
-  height: 5%;
+  padding-top: 15px;
+  font-size: 18px;
+  height: 10%;
   width: 100%;
+  &.small {
+    padding-top: 8px;
+    font-size: 13px;
+  }
 }
 
 .ampmText {
-  font-size: 230%;
-  font-weight: bold;
+  font-weight: 900;
   position: absolute;
-  right: 0;
-  top: -1200%;
+  right: 40px;
+  top: -5px;
+
   &:last-child {
-    top: -1000%;
+    top: -5px;
+    right: 5px;
+  }
+  &.small {
+    right: 28px;
+    top: -5px;
+  }
+  &:last-child.small {
+    right: 3px;
   }
   &.passive {
-    opacity: $passive-opacity;
+    opacity: 0.3;
   }
 }
 

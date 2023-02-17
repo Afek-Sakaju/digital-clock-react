@@ -1,11 +1,7 @@
-@mixin dayTextDesign {
-  font-size: 300%;
+.dayText {
+  font-size: 53%;
   font-weight: 600;
   color: black;
-}
-
-.dayText {
-  @include dayTextDesign;
   &.passive {
     opacity: 0.3;
   }

@@ -38,20 +38,24 @@ Default.decorators = [
   ),
 ];
 
-export const Custom = (props) => (
-  <div
-    style={{
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-      height: `${props.height ?? 200}px`,
-      width: `${props.width ?? 600}px`,
-    }}
-  >
-    <Clock height={"100%"} width={"100%"} />
-  </div>
-);
+const Template = (args) => <Clock {...args} />;
+
+export const Custom = Template.bind({});
+Custom.decorators = [
+  (Story) => (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "200px",
+        width: "600px",
+      }}
+    >
+      <Story />
+    </div>
+  ),
+];
 Custom.argTypes = {
-  height: { control: { type: "number", min: 100, max: 3000, step: 50 } },
-  width: { control: { type: "number", min: 100, max: 4000, step: 50 } },
+  size: { control: "inline-radio", options: ["normal", "small"] },
 };

@@ -28,8 +28,6 @@ export default {
   ],
 };
 
-const Template = (args) => <DayText {...args} />;
-
 export const Default = () => <DayText />;
 
 export const AdjustableSize = (props) => {
@@ -49,6 +47,8 @@ AdjustableSize.argTypes = {
   width: { control: { type: "number", min: 50, max: 3000, step: 50 } },
   height: { control: { type: "number", min: 50, max: 3000, step: 50 } },
 };
+
+const Template = (args) => <DayText {...args} />;
 
 export const SelectDay = Template.bind({});
 SelectDay.argTypes = {
