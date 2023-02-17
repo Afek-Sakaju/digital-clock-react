@@ -1,9 +1,9 @@
 import React from "react";
-import { MainDigitalClock } from "../MainDigitalClockl";
+import { Clock } from "../Clock";
 
 export default {
-  title: "components/MainDigitalClock",
-  component: MainDigitalClock,
+  title: "components/Clock",
+  component: Clock,
   decorators: [
     (Story) => (
       <div
@@ -21,7 +21,7 @@ export default {
   ],
 };
 
-export const Default = () => <MainDigitalClock />;
+export const Default = () => <Clock />;
 Default.decorators = [
   (Story) => (
     <div
@@ -48,7 +48,7 @@ export const Custom = (props) => (
       width: `${props.width ?? 600}px`,
     }}
   >
-    <MainDigitalClock height={"100%"} width={"100%"} />
+    <Clock height={"100%"} width={"100%"} />
   </div>
 );
 Custom.argTypes = {

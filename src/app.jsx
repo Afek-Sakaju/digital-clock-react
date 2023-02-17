@@ -1,10 +1,10 @@
 import React from "react";
-import { MainDigitalClock } from "./components";
+import { Clock } from "./components";
 
 function App() {
   return (
     <div className="appContainer">
-      <MainDigitalClock />
+      <Clock />
     </div>
   );
 }

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { ManagedDigitsClock, DaysGroup } from "../index";
-import "./MainDigitalClock.scss";
+import "./Clock.scss";
 import { getCurrentDateFormat } from "../../utils";
 
-export function MainDigitalClock({ height, width }) {
+export function Clock({ height, width }) {
   const [ampmState, setAmPmState] = useState("AM");
   const [localeTime, onTimeChange] = useState(getCurrentDateFormat());
   const [currentDay, setCurrentDay] = useState(localeTime.split(" ")[0]);
@@ -36,12 +36,12 @@ export function MainDigitalClock({ height, width }) {
   );
 }
 
-MainDigitalClock.propTypes = {
+Clock.propTypes = {
   height: PropTypes.string,
   width: PropTypes.string,
 };
 
-MainDigitalClock.defaultProps = {
+Clock.defaultProps = {
   height: "100%",
   width: "100%",
 };
