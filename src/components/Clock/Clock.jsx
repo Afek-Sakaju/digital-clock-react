@@ -18,7 +18,7 @@ export function Clock({ size, timestamp }) {
       break;
     default:
       sizeClassname = "clock-normal";
-      sizeObj = { width: "250px", height: "130px" };
+      sizeObj = { width: "250px", height: "100px" };
   }
 
   // todo : transfer ampm to component & change classes to kabab & change color of trapezoid to variable
