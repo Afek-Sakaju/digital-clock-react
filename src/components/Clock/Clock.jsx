@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import { ManagedDigitsClock, DaysGroup } from "../index";
-import { getCurrentDateFormat } from "../../utils";
+import { getDateFormat } from "../../utils";
 import "./Clock.scss";
 
-export function Clock({ size }) {
+export function Clock({ size, timestamp }) {
   const [ampmState, setAmPmState] = useState("AM");
-  const [localeTime, onTimeChange] = useState(getCurrentDateFormat());
-  const [currentDay, setCurrentDay] = useState(localeTime.split(" ")[0]);
+  const [localeTime, onTimeChange] = useState(getDateFormat(timestamp));
+  const [currentDay, setCurrentDay] = useState(localeTime.day);
 
   let sizeClassname;
   let sizeObj;
