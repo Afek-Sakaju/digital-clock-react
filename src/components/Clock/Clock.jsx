@@ -12,7 +12,7 @@ export function Clock({ size }) {
   const sizeClassAddons = size === "small" ? "small" : "";
 
   return (
-    <div className={`mainContainer ${sizeClassAddons}`}>
+    <div className={`clockComponentContainer ${sizeClassAddons}`}>
       <div className="componentContainer">
         <div className="daysContainer">
           <DaysGroup currentDay={currentDay} />
