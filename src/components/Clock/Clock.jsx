@@ -21,6 +21,8 @@ export function Clock({ size }) {
       sizeObj = { width: "250px", height: "130px" };
   }
 
+  // todo : transfer ampm to component & change classes to kabab & change color of trapezoid to variable
+  // todo : onClick will toggle between 24h to ampm
   return (
     <div className={`clockComponentContainer ${sizeClassname}`} style={sizeObj}>
       <div className="componentContainer">
