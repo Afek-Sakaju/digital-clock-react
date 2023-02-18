@@ -11,7 +11,7 @@ export function Clock({ size }) {
 
   const sizeClassAddons = size === "small" ? "small" : "";
 
-  // todo : transfer ampm to component & change classes to kabab
+  // todo : transfer ampm to component & change classes to kabab & change color of trapezoid to variable
   // todo : onClick will toggle between 24h to ampm
   return (
     <div className={`clockComponentContainer ${sizeClassAddons}`}>
