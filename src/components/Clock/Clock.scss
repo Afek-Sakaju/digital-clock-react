@@ -1,14 +1,30 @@
 @import "../../utils/variables.scss";
 
 .clockComponentContainer {
-  border: 10px rgba(128, 128, 128, 0.5) solid;
-  border-radius: 30px;
-  box-shadow: 0 0 0 3px black;
-  height: 130px;
-  width: 250px;
-  &.small {
-    height: 100px;
-    width: 150px;
+  border: 2px rgba(128, 128, 128, 0.5) solid;
+  border-radius: 10px 10px 0 0 ;
+  box-shadow: 0 -1px 5px gray;
+  overflow: hidden;
+}
+
+.clock-small {
+  .ampmContainer{
+    padding-top: 8px;
+    font-size: 13px;
+
+    .ampmText{
+      right: 28px;
+      top: -5px;
+
+      &:last-child {
+        right: 3px;
+      }
+    }
+  }
+
+  .two-digits:after{
+    font-size: 2em;
+    right: -8px;
   }
 }
 
@@ -20,7 +36,6 @@
   box-sizing: border-box;
   background-color: rgb(243, 243, 243);
   border: 5px rgba(243, 243, 243) solid;
-  border-radius: 25px;
   height: 100%;
   width: 100%;
   gap: 5%;
@@ -33,10 +48,6 @@
   font-size: 18px;
   height: 10%;
   width: 100%;
-  &.small {
-    padding-top: 8px;
-    font-size: 13px;
-  }
 }
 
 .ampmText {
@@ -49,13 +60,7 @@
     top: -5px;
     right: 5px;
   }
-  &.small {
-    right: 28px;
-    top: -5px;
-  }
-  &:last-child.small {
-    right: 3px;
-  }
+
   &.passive {
     opacity: 0.3;
   }
@@ -70,4 +75,9 @@
   height: 20%;
   width: 100%;
   gap: 5%;
+}
+
+.digits-container{
+  height: 40%;
+  width: 80%;
 }

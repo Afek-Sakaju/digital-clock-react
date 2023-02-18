@@ -13,7 +13,9 @@ export function Digit({ value }) {
           <div
             key={index}
             className={
-              isActive ? `d${divNumber}Shape` : `passive d${divNumber}Shape`
+              isActive
+                ? `d-shape d${divNumber}Shape`
+                : `passive d${divNumber}Shape`
             }
           />
         );

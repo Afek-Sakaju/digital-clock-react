@@ -9,39 +9,39 @@ export function Clock({ size }) {
   const [localeTime, onTimeChange] = useState(getCurrentDateFormat());
   const [currentDay, setCurrentDay] = useState(localeTime.split(" ")[0]);
 
-  const sizeClassAddons = size === "small" ? "small" : "";
+  let sizeClassname;
+  let sizeObj;
+  switch (size) {
+    case "small":
+      sizeClassname = "clock-small";
+      sizeObj = { width: "200px", height: "80px" };
+      break;
+    default:
+      sizeClassname = "clock-normal";
+      sizeObj = { width: "250px", height: "130px" };
+  }
 
   return (
-    <div className={`clockComponentContainer ${sizeClassAddons}`}>
+    <div className={`clockComponentContainer ${sizeClassname}`} style={sizeObj}>
       <div className="componentContainer">
         <div className="daysContainer">
           <DaysGroup currentDay={currentDay} />
         </div>
-        <ManagedDigitsClock
-          updateAmPm={setAmPmState}
-          localeTime={localeTime}
-          onTimeChange={onTimeChange}
-          currentDay={currentDay}
-          onDayChange={setCurrentDay}
-          useInterval={true}
-        />
-        <div className={`ampmContainer ${sizeClassAddons}`}>
-          <div
-            className={
-              ampmState === "AM"
-                ? `ampmText ${sizeClassAddons}`
-                : `ampmText ${sizeClassAddons} passive`
-            }
-          >
+        <div className="digits-container">
+          <ManagedDigitsClock
+            updateAmPm={setAmPmState}
+            localeTime={localeTime}
+            onTimeChange={onTimeChange}
+            currentDay={currentDay}
+            onDayChange={setCurrentDay}
+            useInterval={true}
+          />
+        </div>
+        <div className="ampmContainer">
+          <div className={ampmState === "AM" ? `ampmText` : `ampmText passive`}>
             AM
           </div>
-          <div
-            className={
-              ampmState === "PM"
-                ? `ampmText ${sizeClassAddons}`
-                : `ampmText ${sizeClassAddons} passive`
-            }
-          >
+          <div className={ampmState === "PM" ? `ampmText` : `ampmText passive`}>
             PM
           </div>
         </div>
