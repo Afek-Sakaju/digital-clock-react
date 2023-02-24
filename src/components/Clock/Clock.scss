@@ -8,13 +8,22 @@
 }
 
 .clock-small {
+  .component-container {
+    padding: 2px 0 0 0;
+  }
+
+  .day-text {
+    flex: 1 1 auto;
+    width: max-content;
+    font-size: 11px;
+    font-weight: 900;
+  }
+
   .ampm-container {
-    padding-top: 8px;
-    font-size: 13px;
+    font-size: 12px;
 
     .ampm-text {
-      right: 28px;
-      top: -5px;
+      right: 31px;
 
       &:last-child {
         right: 3px;
@@ -53,10 +62,9 @@
   font-weight: 900;
   position: absolute;
   right: 40px;
-  top: -5px;
+  top: -3px;
 
   &:last-child {
-    top: -5px;
     right: 5px;
   }
 
