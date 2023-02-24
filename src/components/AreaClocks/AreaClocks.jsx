@@ -7,12 +7,14 @@ import { Clock } from "../../components";
 import "./AreaClocks.scss";
 
 export function AreaClocks({ timeZones, clocksSize }) {
+  const sizeClassname = clocksSize === "small" ? "small-area-clocks" : "";
+
   return (
-    <>
+    <div className="clocks-area-container">
       {timeZones.map((zone, i) => {
         return (
-          <div className="clock-and-zone-container">
-            <TimeAreaText />
+          <div className={`clock-and-zone-container ${sizeClassname}`}>
+            <TimeAreaText label={zone.name} />
             <Clock
               key={i}
               size={clocksSize}
@@ -21,7 +23,7 @@ export function AreaClocks({ timeZones, clocksSize }) {
           </div>
         );
       })}
-    </>
+    </div>
   );
 }
 

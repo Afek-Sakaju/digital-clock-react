@@ -4,12 +4,6 @@ import { TimeAreaText } from "../TimeAreaText";
 export default {
   title: "base-components/TimeAreaText",
   component: TimeAreaText,
-  //parameters: {
-  //  controls: {
-  //    // This line hides specified controls
-  //    exclude: /(^imageUrl$)/g,
-  //  },
-  //},
   decorators: [
     (Story) => (
       <div
