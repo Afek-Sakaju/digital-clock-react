@@ -25,7 +25,7 @@ export function Clock({ size, timestamp }) {
 
   return (
     <div
-      className={`clock-component-ontainer ${sizeClassname}`}
+      className={`clock-component-container ${sizeClassname}`}
       style={sizeObj}
     >
       <div className="component-container">
