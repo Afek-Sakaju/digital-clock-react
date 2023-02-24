@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { ManagedDigitsClock } from "../ManagedDigitsClock";
-import { getCurrentDateFormat } from "../../../utils";
+import { getDateFormat } from "../../../utils";
 
 export default {
   title: "components/ManagedDigitsClock",
@@ -46,7 +46,7 @@ export const Default = () => {
 
 export const useInterval = () => {
   const [useInterval, setUseInterval] = useState(false);
-  const [localeTime, onTimeChange] = useState(getCurrentDateFormat());
+  const [localeTime, onTimeChange] = useState(getDateFormat());
 
   return (
     <div
