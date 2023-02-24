@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import { ManagedDigitsClock, DaysGroup } from "../index";
+
+import { ManagedDigitsClock, DaysGroup } from "../";
+import { AmpmText } from "../../base-components";
 import { getDateFormat } from "../../utils";
 import "./Clock.scss";
 
@@ -21,8 +23,6 @@ export function Clock({ size, timestamp }) {
       sizeObj = { width: "250px", height: "100px" };
   }
 
-  // todo : transfer ampm to component & change classes to kabab
-  // todo : onClick will toggle between 24h to ampm
   return (
     <div
       className={`clock-component-ontainer ${sizeClassname}`}
@@ -43,16 +43,8 @@ export function Clock({ size, timestamp }) {
           />
         </div>
         <div className="ampm-container">
-          <div
-            className={ampmState === "AM" ? `ampm-text` : `ampm-text passive`}
-          >
-            AM
-          </div>
-          <div
-            className={ampmState === "PM" ? `ampm-text` : `ampm-text passive`}
-          >
-            PM
-          </div>
+          <AmpmText ampmState={ampmState} label={"AM"} />
+          <AmpmText ampmState={ampmState} label={"PM"} />
         </div>
       </div>
     </div>
