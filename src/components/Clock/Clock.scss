@@ -1,18 +1,18 @@
 @import "../../utils/variables.scss";
 
-.clockComponentContainer {
+.clock-component-ontainer {
   border: 2px rgba(128, 128, 128, 0.5) solid;
-  border-radius: 10px 10px 0 0 ;
+  border-radius: 10px 10px 0 0;
   box-shadow: 0 -1px 5px gray;
   overflow: hidden;
 }
 
 .clock-small {
-  .ampmContainer{
+  .ampm-container {
     padding-top: 8px;
     font-size: 13px;
 
-    .ampmText{
+    .ampm-text {
       right: 28px;
       top: -5px;
 
@@ -22,13 +22,13 @@
     }
   }
 
-  .two-digits:after{
+  .two-digits:after {
     font-size: 2em;
     right: -8px;
   }
 }
 
-.componentContainer {
+.component-container {
   padding: 5px 0 0 0;
   display: flex;
   justify-content: flex-start;
@@ -42,14 +42,14 @@
   gap: 5px;
 }
 
-.ampmContainer {
+.ampm-container {
   position: relative;
   box-sizing: border-box;
   font-size: 14px;
   width: 100%;
 }
 
-.ampmText {
+.ampm-text {
   font-weight: 900;
   position: absolute;
   right: 40px;
@@ -65,11 +65,11 @@
   }
 }
 
-.daysContainer {
+.days-container {
   width: 100%;
 }
 
-.digits-container{
+.digits-container {
   height: 55%;
   width: 80%;
 }

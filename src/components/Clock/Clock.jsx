@@ -21,12 +21,15 @@ export function Clock({ size, timestamp }) {
       sizeObj = { width: "250px", height: "100px" };
   }
 
-  // todo : transfer ampm to component & change classes to kabab & change color of trapezoid to variable
+  // todo : transfer ampm to component & change classes to kabab
   // todo : onClick will toggle between 24h to ampm
   return (
-    <div className={`clockComponentContainer ${sizeClassname}`} style={sizeObj}>
-      <div className="componentContainer">
-        <div className="daysContainer">
+    <div
+      className={`clock-component-ontainer ${sizeClassname}`}
+      style={sizeObj}
+    >
+      <div className="component-container">
+        <div className="days-container">
           <DaysGroup currentDay={currentDay} />
         </div>
         <div className="digits-container">
@@ -39,11 +42,15 @@ export function Clock({ size, timestamp }) {
             useInterval={true}
           />
         </div>
-        <div className="ampmContainer">
-          <div className={ampmState === "AM" ? `ampmText` : `ampmText passive`}>
+        <div className="ampm-container">
+          <div
+            className={ampmState === "AM" ? `ampm-text` : `ampm-text passive`}
+          >
             AM
           </div>
-          <div className={ampmState === "PM" ? `ampmText` : `ampmText passive`}>
+          <div
+            className={ampmState === "PM" ? `ampm-text` : `ampm-text passive`}
+          >
             PM
           </div>
         </div>
