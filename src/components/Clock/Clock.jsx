@@ -53,8 +53,10 @@ export function Clock({ size, timestamp }) {
 
 Clock.propTypes = {
   size: PropTypes.string,
+  timestamp: PropTypes.number,
 };
 
 Clock.defaultProps = {
   size: "normal",
+  timestamp: undefined,
 };
