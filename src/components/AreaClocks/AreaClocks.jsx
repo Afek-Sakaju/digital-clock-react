@@ -1,16 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { Clock } from "../../components";
 import { getZoneTimestamp } from "../../utils";
+import { TimeAreaText } from "../../base-components";
+import { Clock } from "../../components";
+import "./AreaClocks.scss";
 
 export function AreaClocks({ timeZones, clocksSize }) {
   return (
     <>
       {timeZones.map((zone, i) => {
         return (
-          <div key={i}>
-            {zone.name}
+          <div className="clock-and-zone-container">
+            <TimeAreaText />
             <Clock
               key={i}
               size={clocksSize}
