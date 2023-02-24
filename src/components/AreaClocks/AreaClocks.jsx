@@ -10,7 +10,7 @@ export function AreaClocks({ timeZones, clocksSize }) {
       {timeZones.map((zone, i) => {
         return (
           <div key={i}>
-            {`${zone.name} ${getZoneTimestamp(zone)}`}
+            {zone.name}
             <Clock
               key={i}
               size={clocksSize}

@@ -21,6 +21,6 @@ export function getZoneTimestamp(zone) {
   const currentTimestamp = new Date().getTime();
 
   return zone.isEarly
-    ? currentTimestamp - zone.diff * 60 * 60
-    : currentTimestamp + zone.diff * 60 * 60;
+    ? currentTimestamp - zone.diff * 1000 * 60 * 60
+    : currentTimestamp + zone.diff * 1000 * 60 * 60;
 }
