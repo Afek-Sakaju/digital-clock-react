@@ -5,7 +5,7 @@ import { timeZones } from "./utils";
 
 function App() {
   return (
-    <div className="appContainer">
+    <div className="app-container">
       <AreaClocks timeZones={timeZones} />
     </div>
   );
