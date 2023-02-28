@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./TimeAreaText.scss";
 
 export function TimeAreaText({ label }) {
-  return <div className="time-area-text">{label}:</div>;
+  return <h2 className="time-area-text">{label}:</h2>;
 }
 
 TimeAreaText.propTypes = {

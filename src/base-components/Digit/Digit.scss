@@ -9,6 +9,14 @@
   position: relative;
 }
 
+.d-shape {
+  position: absolute;
+  background-color: green;
+  &.passive {
+    opacity: $passive-opacity;
+  }
+}
+
 .d1-shape {
   @include trapezoid-top-base;
 }

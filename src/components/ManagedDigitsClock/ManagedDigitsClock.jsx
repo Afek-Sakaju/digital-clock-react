@@ -11,7 +11,7 @@ export function ManagedDigitsClock({
   onDayChange,
   useInterval,
 }) {
-  const { day, time, ampm } = localeTime;
+  const { day, time, ampm } = localeTime ?? {};
 
   useEffect(() => {
     const timerInterval =
@@ -57,5 +57,5 @@ ManagedDigitsClock.defaultProps = {
   currentDay: "noDay",
   onDayChange: undefined,
   useInterval: true,
-  localeTime: 0,
+  localeTime: undefined,
 };

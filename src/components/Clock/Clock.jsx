@@ -6,6 +6,13 @@ import { AmpmText } from "../../base-components";
 import { getDateFormat } from "../../utils";
 import "./Clock.scss";
 
+const CLOCK_SIZE = {
+  small: { width: "150px", height: "750px" },
+  medium: { width: "250px", height: "100px" },
+  large: { width: "350px", height: "150px" },
+}
+const DEFAULT_CLOCK_SIZE = CLOCK_SIZE.small;
+
 export function Clock({ size, timestamp }) {
   const [ampmState, setAmPmState] = useState("AM");
   const [localeTime, onTimeChange] = useState(getDateFormat(timestamp));

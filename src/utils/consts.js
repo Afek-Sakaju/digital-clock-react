@@ -2,6 +2,17 @@ export const daysArray = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
 
 export const trapezoids = [1, 2, 3, 4, 5, 6, 7];
 
+/*
+ *  +--d1--+
+ *  |      |
+ * d2      d3
+ *  |      |
+ *  +--d4--+
+ *  |      |
+ * d5      d6
+ *  |      |
+ *  +--d7--+
+ */
 export const activeLinesByNumber = {
   0: [1, 2, 3, 5, 6, 7],
   1: [3, 6],
