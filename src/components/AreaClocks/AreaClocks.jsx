@@ -13,10 +13,9 @@ export function AreaClocks({ timeZones, clocksSize }) {
     <div className="clocks-area-container">
       {timeZones.map((zone, i) => {
         return (
-          <div className={`clock-and-zone-container ${sizeClassname}`}>
+          <div key={i} className={`clock-and-zone-container ${sizeClassname}`}>
             <TimeAreaText label={zone.name} />
             <Clock
-              key={i}
               size={clocksSize}
               timestamp={getZoneTimestamp(zone)}
             />
