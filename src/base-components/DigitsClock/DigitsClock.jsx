@@ -6,7 +6,7 @@ import "./DigitsClock.scss";
 export function DigitsClock({ time }) {
   let [hh, mm, ss] = time?.split(":") ?? ["00", "00", "00"];
   let timeUnits = time?.split(":") ?? ["00", "00", "00"];
-  timeUnits.map(unit => unit.padStart(2, "0"));
+  timeUnits.map((unit) => unit.padStart(2, "0"));
 
   hh = hh.padStart(2, "0");
   mm = mm.padStart(2, "0");

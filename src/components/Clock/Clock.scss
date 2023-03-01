@@ -7,34 +7,12 @@
   overflow: hidden;
 }
 
-.clock-small {
-  .component-container {
-    padding: 2px 0 0 0;
-  }
-
-  .day-text {
-    flex: 1 1 auto;
-    width: max-content;
-    font-size: 11px;
-    font-weight: 900;
-  }
-
-  .ampm-container {
-    font-size: 12px;
-
-    .ampm-text {
-      right: 31px;
-
-      &:last-child {
-        right: 3px;
-      }
-    }
-  }
-
-  .two-digits:after {
-    font-size: 2em;
-    right: -8px;
-  }
+.days-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 
 .component-container {
@@ -51,30 +29,51 @@
   gap: 5px;
 }
 
-.ampm-container {
-  position: relative;
+.clock-small {
+  .component-container {
+    padding: 2px 0 0 0;
+  }
+
+  .text-style {
+    font-size: 11px;
+    font-weight: 900;
+  }
+
+  .bottom-container {
+    font-size: 12px;
+  }
+
+  .two-digits:after {
+    font-size: 2em;
+    right: -8px;
+  }
+
+  .days-container {
+    padding-bottom: 1px;
+    gap: 6px;
+  }
+
+  .component-container {
+    gap: 0px;
+  }
+}
+
+.bottom-container {
+  display: flex;
   box-sizing: border-box;
-  font-size: 14px;
   width: 100%;
-}
 
-.ampm-text {
-  font-weight: 900;
-  position: absolute;
-  right: 40px;
-  top: -3px;
+  .text-style {
+    margin-left: 5px;
 
-  &:last-child {
-    right: 5px;
+    &:first-child {
+      margin: unset;
+      margin-right: auto;
+      &:hover {
+        cursor: pointer;
+      }
+    }
   }
-
-  &.passive {
-    opacity: 0.3;
-  }
-}
-
-.days-container {
-  width: 100%;
 }
 
 .digits-container {

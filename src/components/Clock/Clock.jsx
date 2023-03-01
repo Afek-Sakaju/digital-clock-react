@@ -1,43 +1,28 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-import { ManagedDigitsClock, DaysGroup } from "../";
-import { AmpmText } from "../../base-components";
-import { getDateFormat } from "../../utils";
+import { ManagedDigitsClock } from "../";
+import { TextToggled } from "../../base-components";
+import { getDateFormat, CLOCK_SIZES, DAYS_ARRAY } from "../../utils";
 import "./Clock.scss";
 
-const CLOCK_SIZE = {
-  small: { width: "150px", height: "750px" },
-  medium: { width: "250px", height: "100px" },
-  large: { width: "350px", height: "150px" },
-}
-const DEFAULT_CLOCK_SIZE = CLOCK_SIZE.small;
-
-export function Clock({ size, timestamp }) {
+export function Clock({ size, timestamp, useInterval }) {
   const [ampmState, setAmPmState] = useState("AM");
   const [localeTime, onTimeChange] = useState(getDateFormat(timestamp));
   const [currentDay, setCurrentDay] = useState(localeTime.day);
+  const [mode24H, setMode24H] = useState(false);
 
-  let sizeClassname;
-  let sizeObj;
-  switch (size) {
-    case "small":
-      sizeClassname = "clock-small";
-      sizeObj = { width: "200px", height: "80px" };
-      break;
-    default:
-      sizeClassname = "clock-normal";
-      sizeObj = { width: "250px", height: "100px" };
-  }
-
+  const sizeObject = CLOCK_SIZES[size] || CLOCK_SIZES["medium"];
   return (
     <div
-      className={`clock-component-container ${sizeClassname}`}
-      style={sizeObj}
+      className={`clock-component-container clock-${size}`}
+      style={sizeObject}
     >
       <div className="component-container">
         <div className="days-container">
-          <DaysGroup currentDay={currentDay} />
+          {DAYS_ARRAY.map((day, i) => (
+            <TextToggled key={i} label={day} activeLabel={currentDay} />
+          ))}
         </div>
         <div className="digits-container">
           <ManagedDigitsClock
@@ -46,12 +31,22 @@ export function Clock({ size, timestamp }) {
             onTimeChange={onTimeChange}
             currentDay={currentDay}
             onDayChange={setCurrentDay}
-            useInterval={true}
+            useInterval={useInterval}
+            mode24H={mode24H}
           />
         </div>
-        <div className="ampm-container">
-          <AmpmText ampmState={ampmState} label={"AM"} />
-          <AmpmText ampmState={ampmState} label={"PM"} />
+        <div className="bottom-container">
+          <TextToggled
+            label={"24H"}
+            activeLabel={mode24H ? "24H" : ""}
+            onClick={() => setMode24H((m) => !m)}
+          />
+          {mode24H || (
+            <>
+              <TextToggled label={"AM"} activeLabel={ampmState} />{" "}
+              <TextToggled label={"PM"} activeLabel={ampmState} />
+            </>
+          )}
         </div>
       </div>
     </div>
@@ -61,9 +56,11 @@ export function Clock({ size, timestamp }) {
 Clock.propTypes = {
   size: PropTypes.string,
   timestamp: PropTypes.number,
+  useInterval: PropTypes.bool,
 };
 
 Clock.defaultProps = {
-  size: "normal",
+  size: "small",
   timestamp: undefined,
+  useInterval: true,
 };
