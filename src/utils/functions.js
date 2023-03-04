@@ -2,20 +2,39 @@
 a date, the date properties returns as object such as: 
 "{day:'day', time:'HH:MM:SS', ampm:'AM', timestamp: 102391}
 if timestamp not provided, returns current date. */
-export function getDateFormat(timestamp = undefined, is12HoursMode = false) {
+export function getDateFormat(
+  timestamp = undefined,
+  is24HoursMode = undefined
+) {
   const date = typeof timestamp !== "number" ? new Date() : new Date(timestamp);
 
-  const localeTime = date.toLocaleDateString("en-US", {
+  const localeTimeAmpm = date.toLocaleDateString("en-US", {
     weekday: "short",
     hour: "numeric",
     minute: "numeric",
     second: "numeric",
-    hour12: is12HoursMode,
   });
 
-  const [day, time, ampm] = localeTime.split(" ");
+  const localeTime24H = is24HoursMode
+    ? date.toLocaleDateString("en-US", {
+        weekday: "short",
+        hour: "numeric",
+        minute: "numeric",
+        second: "numeric",
+        hour12: false,
+      })
+    : "";
 
-  return { day, time, ampm, timestamp: date.getTime() };
+  const [day, time12, ampm] = localeTimeAmpm.split(" ");
+  const [, time24] = localeTime24H.split(" ");
+
+  return {
+    day,
+    time: is24HoursMode ? time24 : time12,
+    ampm,
+    timestamp: date.getTime(),
+    is24HoursMode,
+  };
 }
 
 export function getZoneTimestamp(zone) {

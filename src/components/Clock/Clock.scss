@@ -62,17 +62,10 @@
   display: flex;
   box-sizing: border-box;
   width: 100%;
-
-  .text-style {
-    margin-left: 5px;
-
-    &:first-child {
-      margin: unset;
-      margin-right: auto;
-      &:hover {
-        cursor: pointer;
-      }
-    }
+  justify-content: flex-end;
+  gap: 5px;
+  &:hover {
+    cursor: pointer;
   }
 }
 

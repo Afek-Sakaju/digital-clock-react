@@ -6,12 +6,13 @@ import { TextToggled } from "../../base-components";
 import { getDateFormat, CLOCK_SIZES, DAYS_ARRAY } from "../../utils";
 import "./Clock.scss";
 
-export function Clock({ size, timestamp, useInterval }) {
-  const [ampmState, setAmPmState] = useState("AM");
-  const [localeTime, onTimeChange] = useState(getDateFormat(timestamp));
+export function Clock({ size, timestamp, useInterval, mode24H: isMode24H }) {
+  const [mode24H, setMode24H] = useState(isMode24H);
+  const [localeTime, onTimeChange] = useState(
+    getDateFormat(timestamp, mode24H)
+  );
   const [currentDay, setCurrentDay] = useState(localeTime.day);
-  const [mode24H, setMode24H] = useState(false);
-
+  const [ampmState, setAmPmState] = useState(localeTime.ampm);
   const sizeObject = CLOCK_SIZES[size] || CLOCK_SIZES["medium"];
   return (
     <div
@@ -26,6 +27,7 @@ export function Clock({ size, timestamp, useInterval }) {
         </div>
         <div className="digits-container">
           <ManagedDigitsClock
+            ampmState={ampmState}
             updateAmPm={setAmPmState}
             localeTime={localeTime}
             onTimeChange={onTimeChange}
@@ -35,15 +37,12 @@ export function Clock({ size, timestamp, useInterval }) {
             mode24H={mode24H}
           />
         </div>
-        <div className="bottom-container">
-          <TextToggled
-            label={"24H"}
-            activeLabel={mode24H ? "24H" : ""}
-            onClick={() => setMode24H((m) => !m)}
-          />
-          {mode24H || (
+        <div className="bottom-container" onClick={() => setMode24H((m) => !m)}>
+          {mode24H ? (
+            <TextToggled label={"24H"} activeLabel={"24H"} />
+          ) : (
             <>
-              <TextToggled label={"AM"} activeLabel={ampmState} />{" "}
+              <TextToggled label={"AM"} activeLabel={ampmState} />
               <TextToggled label={"PM"} activeLabel={ampmState} />
             </>
           )}

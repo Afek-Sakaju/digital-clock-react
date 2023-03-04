@@ -1,5 +1,5 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import PropTypes from "prop-types";
 import { DigitsClock } from "../../base-components/DigitsClock/DigitsClock";
 import { getDateFormat } from "../../utils";
@@ -13,6 +13,7 @@ export function ManagedDigitsClock({
   useInterval,
   mode24H,
 }) {
+  console.table(localeTime);
   const { day, time, ampm } = localeTime ?? {};
 
   useEffect(() => {
@@ -20,10 +21,7 @@ export function ManagedDigitsClock({
       useInterval &&
       setInterval(() => {
         onTimeChange?.((date) => {
-          return getDateFormat(
-            date.timestamp + 1000,
-            mode24H && ampmState === "AM"
-          );
+          return getDateFormat(date.timestamp + 1000, date.is24HoursMode);
         });
       }, 1000);
 
@@ -39,6 +37,12 @@ export function ManagedDigitsClock({
   useEffect(() => {
     updateAmpm?.(ampm);
   }, [ampm]);
+
+  useEffect(() => {
+    onTimeChange?.((date) => {
+      return getDateFormat(date.timestamp, mode24H && ampmState === "PM");
+    });
+  }, [mode24H, ampmState]);
 
   return <DigitsClock time={time} />;
 }
