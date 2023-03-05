@@ -1,10 +1,20 @@
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "Clock", {
+  enumerable: true,
+  get: function get() {
+    return _components.Clock;
+  }
+});
 var _react = _interopRequireDefault(require("react"));
 var _client = _interopRequireDefault(require("react-dom/client"));
 require("./index.css");
 var _app = _interopRequireDefault(require("./app"));
 var _reportWebVitals = _interopRequireDefault(require("./reportWebVitals"));
+var _components = require("./components");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var root = _client.default.createRoot(document.getElementById("root"));
 root.render( /*#__PURE__*/_react.default.createElement(_react.default.StrictMode, null, /*#__PURE__*/_react.default.createElement(_app.default, null)));

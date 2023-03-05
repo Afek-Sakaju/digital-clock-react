@@ -5,11 +5,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = exports.Default = exports.Custom = void 0;
 var _react = _interopRequireDefault(require("react"));
-var _Clock = require("../Clock");
+var _Clock = _interopRequireDefault(require("../Clock"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var _default = {
   title: "components/Clock",
-  component: _Clock.Clock,
+  component: _Clock.default,
   decorators: [function (Story) {
     return /*#__PURE__*/_react.default.createElement("div", {
       style: {
@@ -24,7 +24,7 @@ var _default = {
 };
 exports.default = _default;
 var Default = function Default() {
-  return /*#__PURE__*/_react.default.createElement(_Clock.Clock, null);
+  return /*#__PURE__*/_react.default.createElement(_Clock.default, null);
 };
 exports.Default = Default;
 Default.decorators = [function (Story) {
@@ -39,7 +39,7 @@ Default.decorators = [function (Story) {
   }, /*#__PURE__*/_react.default.createElement(Story, null));
 }];
 var Template = function Template(args) {
-  return /*#__PURE__*/_react.default.createElement(_Clock.Clock, args);
+  return /*#__PURE__*/_react.default.createElement(_Clock.default, args);
 };
 var Custom = Template.bind({});
 exports.Custom = Custom;

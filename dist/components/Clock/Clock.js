@@ -4,7 +4,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.Clock = Clock;
+exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
 var _ = require("../");
@@ -24,7 +24,7 @@ function Clock(_ref) {
   var size = _ref.size,
     timestamp = _ref.timestamp,
     useInterval = _ref.useInterval,
-    isMode24H = _ref.mode24H;
+    isMode24H = _ref.isMode24H;
   var _useState = (0, _react.useState)(isMode24H),
     _useState2 = _slicedToArray(_useState, 2),
     mode24H = _useState2[0],
@@ -87,10 +87,14 @@ function Clock(_ref) {
 Clock.propTypes = {
   size: _propTypes.default.string,
   timestamp: _propTypes.default.number,
-  useInterval: _propTypes.default.bool
+  useInterval: _propTypes.default.bool,
+  isMode24H: _propTypes.default.bool
 };
 Clock.defaultProps = {
   size: "small",
   timestamp: undefined,
-  useInterval: true
+  useInterval: true,
+  isMode24H: false
 };
+var _default = Clock;
+exports.default = _default;

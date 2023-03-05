@@ -3,10 +3,10 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.DigitsClock = DigitsClock;
+exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
-var _Digit = require("../Digit/Digit");
+var _Digit = _interopRequireDefault(require("../Digit/Digit"));
 require("./DigitsClock.scss");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -35,21 +35,21 @@ function DigitsClock(_ref) {
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "two-digits"
   }, hh.split("").map(function (digit, index) {
-    return /*#__PURE__*/_react.default.createElement(_Digit.Digit, {
+    return /*#__PURE__*/_react.default.createElement(_Digit.default, {
       value: +digit,
       key: "hh ".concat(index)
     });
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "two-digits"
   }, mm.split("").map(function (digit, index) {
-    return /*#__PURE__*/_react.default.createElement(_Digit.Digit, {
+    return /*#__PURE__*/_react.default.createElement(_Digit.default, {
       value: +digit,
       key: "mm ".concat(index)
     });
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "two-digits"
   }, ss.split("").map(function (digit, index) {
-    return /*#__PURE__*/_react.default.createElement(_Digit.Digit, {
+    return /*#__PURE__*/_react.default.createElement(_Digit.default, {
       value: +digit,
       key: "ss ".concat(index)
     });
@@ -61,3 +61,5 @@ DigitsClock.propTypes = {
 DigitsClock.defaultProps = {
   time: "00:00:00"
 };
+var _default = DigitsClock;
+exports.default = _default;

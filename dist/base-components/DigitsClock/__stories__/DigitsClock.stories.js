@@ -5,11 +5,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = exports.Default = exports.Custom = exports.AdjustSize = void 0;
 var _react = _interopRequireDefault(require("react"));
-var _DigitsClock = require("../DigitsClock");
+var _DigitsClock = _interopRequireDefault(require("../DigitsClock"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var _default = {
   title: "base-components/DigitsClock",
-  component: _DigitsClock.DigitsClock,
+  component: _DigitsClock.default,
   decorators: [function (Story) {
     return /*#__PURE__*/_react.default.createElement("div", {
       style: {
@@ -25,7 +25,7 @@ var _default = {
 };
 exports.default = _default;
 var Default = function Default() {
-  return /*#__PURE__*/_react.default.createElement(_DigitsClock.DigitsClock, null);
+  return /*#__PURE__*/_react.default.createElement(_DigitsClock.default, null);
 };
 exports.Default = Default;
 Default.decorators = [function (Story) {
@@ -48,7 +48,7 @@ var AdjustSize = function AdjustSize(props) {
       height: "".concat(props.height, "px"),
       border: "1px dashed blue"
     }
-  }, /*#__PURE__*/_react.default.createElement(_DigitsClock.DigitsClock, null));
+  }, /*#__PURE__*/_react.default.createElement(_DigitsClock.default, null));
 };
 exports.AdjustSize = AdjustSize;
 AdjustSize.argTypes = {
@@ -77,7 +77,7 @@ AdjustSize.args = {
   height: 100
 };
 var Template = function Template(args) {
-  return /*#__PURE__*/_react.default.createElement(_DigitsClock.DigitsClock, args);
+  return /*#__PURE__*/_react.default.createElement(_DigitsClock.default, args);
 };
 var Custom = Template.bind({});
 exports.Custom = Custom;

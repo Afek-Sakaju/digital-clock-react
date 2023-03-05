@@ -4,10 +4,10 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ManagedDigitsClock = ManagedDigitsClock;
+exports.default = void 0;
 var _react = _interopRequireWildcard(require("react"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
-var _DigitsClock = require("../../base-components/DigitsClock/DigitsClock");
+var _baseComponents = require("../../base-components");
 var _utils = require("../../utils");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function _getRequireWildcardCache(nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
@@ -22,7 +22,6 @@ function ManagedDigitsClock(_ref) {
     onDayChange = _ref.onDayChange,
     useInterval = _ref.useInterval,
     mode24H = _ref.mode24H;
-  console.table(localeTime);
   var _ref2 = localeTime !== null && localeTime !== void 0 ? localeTime : {},
     day = _ref2.day,
     time = _ref2.time,
@@ -48,7 +47,7 @@ function ManagedDigitsClock(_ref) {
       return (0, _utils.getDateFormat)(date.timestamp, mode24H && ampmState === "PM");
     });
   }, [mode24H, ampmState]);
-  return /*#__PURE__*/_react.default.createElement(_DigitsClock.DigitsClock, {
+  return /*#__PURE__*/_react.default.createElement(_baseComponents.DigitsClock, {
     time: time
   });
 }
@@ -76,3 +75,5 @@ ManagedDigitsClock.defaultProps = {
   useInterval: true,
   mode24H: false
 };
+var _default = ManagedDigitsClock;
+exports.default = _default;

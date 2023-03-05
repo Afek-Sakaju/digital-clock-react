@@ -37,11 +37,19 @@ var TIME_ZONES = [{
   name: "Israel",
   diff: 0,
   isEarly: true
-}
-//{ name: "United-States", diff: 5, isEarly: true },
-//{ name: "England", diff: 2, isEarly: true },
-//{ name: "Japan", diff: 5, isEarly: false },
-];
+}, {
+  name: "United-States",
+  diff: 5,
+  isEarly: true
+}, {
+  name: "England",
+  diff: 2,
+  isEarly: true
+}, {
+  name: "Japan",
+  diff: 5,
+  isEarly: false
+}];
 exports.TIME_ZONES = TIME_ZONES;
 var CLOCK_SIZES = {
   small: {

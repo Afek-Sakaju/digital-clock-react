@@ -5,11 +5,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = exports.Default = exports.Custom = exports.AdjustableSize = void 0;
 var _react = _interopRequireDefault(require("react"));
-var _Digit = require("../Digit");
+var _Digit = _interopRequireDefault(require("../Digit"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var _default = {
   title: "base-components/Digit",
-  component: _Digit.Digit,
+  component: _Digit.default,
   decorators: [function (Story) {
     return /*#__PURE__*/_react.default.createElement("div", {
       style: {
@@ -23,7 +23,7 @@ var _default = {
 };
 exports.default = _default;
 var Default = function Default() {
-  return /*#__PURE__*/_react.default.createElement(_Digit.Digit, null);
+  return /*#__PURE__*/_react.default.createElement(_Digit.default, null);
 };
 exports.Default = Default;
 Default.decorators = [function (Story) {
@@ -38,7 +38,7 @@ Default.decorators = [function (Story) {
   }, /*#__PURE__*/_react.default.createElement(Story, null));
 }];
 var Template = function Template(args) {
-  return /*#__PURE__*/_react.default.createElement(_Digit.Digit, args);
+  return /*#__PURE__*/_react.default.createElement(_Digit.default, args);
 };
 var AdjustableSize = function AdjustableSize(props) {
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -50,7 +50,7 @@ var AdjustableSize = function AdjustableSize(props) {
       width: "".concat(props.width, "px"),
       height: "".concat(props.height, "px")
     }
-  }, /*#__PURE__*/_react.default.createElement(_Digit.Digit, {
+  }, /*#__PURE__*/_react.default.createElement(_Digit.default, {
     value: 6
   }));
 };

@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.TimeAreaText = TimeAreaText;
+exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
 require("./TimeAreaText.scss");
@@ -20,3 +20,5 @@ TimeAreaText.propTypes = {
 TimeAreaText.defaultProps = {
   label: "undefined-zone"
 };
+var _default = TimeAreaText;
+exports.default = _default;

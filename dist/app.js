@@ -20,9 +20,7 @@ function App() {
       className: "clock-and-zone-container"
     }, /*#__PURE__*/_react.default.createElement(_baseComponents.TimeAreaText, {
       label: zone.name
-    }), /*#__PURE__*/_react.default.createElement(_components.Clock, {
-      timestamp: (0, _utils.getZoneTimestamp)(zone)
-    }));
+    }), /*#__PURE__*/_react.default.createElement(_components.Clock, null));
   })));
 }
 var _default = App;

@@ -5,11 +5,11 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = exports.Default = exports.Custom = exports.AdjustableSize = void 0;
 var _react = _interopRequireDefault(require("react"));
-var _TimeAreaText = require("../TimeAreaText");
+var _TimeAreaText = _interopRequireDefault(require("../TimeAreaText"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 var _default = {
   title: "base-components/TimeAreaText",
-  component: _TimeAreaText.TimeAreaText,
+  component: _TimeAreaText.default,
   decorators: [function (Story) {
     return /*#__PURE__*/_react.default.createElement("div", {
       style: {
@@ -24,7 +24,7 @@ var _default = {
 };
 exports.default = _default;
 var Default = function Default() {
-  return /*#__PURE__*/_react.default.createElement(_TimeAreaText.TimeAreaText, null);
+  return /*#__PURE__*/_react.default.createElement(_TimeAreaText.default, null);
 };
 exports.Default = Default;
 var AdjustableSize = function AdjustableSize(props) {
@@ -37,7 +37,7 @@ var AdjustableSize = function AdjustableSize(props) {
       width: "".concat(props.width, "px"),
       height: "".concat(props.height, "px")
     }
-  }, /*#__PURE__*/_react.default.createElement(_TimeAreaText.TimeAreaText, {
+  }, /*#__PURE__*/_react.default.createElement(_TimeAreaText.default, {
     label: "Japan"
   }));
 };
@@ -66,7 +66,7 @@ AdjustableSize.argTypes = {
   }
 };
 var Template = function Template(args) {
-  return /*#__PURE__*/_react.default.createElement(_TimeAreaText.TimeAreaText, args);
+  return /*#__PURE__*/_react.default.createElement(_TimeAreaText.default, args);
 };
 var Custom = Template.bind({});
 exports.Custom = Custom;

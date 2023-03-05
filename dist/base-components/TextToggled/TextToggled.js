@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.TextToggled = TextToggled;
+exports.default = void 0;
 var _react = _interopRequireDefault(require("react"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
 require("./TextToggled.scss");
@@ -31,3 +31,5 @@ TextToggled.defaultProps = {
   activeLabel: "unknown",
   onClick: undefined
 };
+var _default = TextToggled;
+exports.default = _default;
