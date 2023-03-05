@@ -13,7 +13,6 @@ export function ManagedDigitsClock({
   useInterval,
   mode24H,
 }) {
-  console.table(localeTime);
   const { day, time, ampm } = localeTime ?? {};
 
   useEffect(() => {
