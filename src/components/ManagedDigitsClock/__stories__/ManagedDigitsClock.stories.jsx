@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ManagedDigitsClock } from "../ManagedDigitsClock";
+import ManagedDigitsClock from "../ManagedDigitsClock";
 import { getDateFormat } from "../../../utils";
 
 export default {

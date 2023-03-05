@@ -1,7 +1,7 @@
 import React from "react";
 
-import { Clock } from "./components";
-import { TimeAreaText } from "./base-components";
+import Clock from "./components";
+import TimeAreaText from "./base-components";
 import { TIME_ZONES, getZoneTimestamp } from "./utils";
 
 function App() {
