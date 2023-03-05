@@ -1,5 +1,5 @@
 import React from "react";
-import { DigitsClock } from "../DigitsClock";
+import  DigitsClock  from "../DigitsClock";
 
 export default {
   title: "base-components/DigitsClock",

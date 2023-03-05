@@ -1,3 +1,4 @@
-export * from "./Digit/Digit";
-export * from "./TimeAreaText/TimeAreaText";
-export * from "./TextToggled/TextToggled";
+export { default as Digit } from "./Digit/Digit";
+export { default as DigitsClock } from "./DigitsClock/DigitsClock";
+export { default as TimeAreaText } from "./TimeAreaText/TimeAreaText";
+export { default as TextToggled } from "./TextToggled/TextToggled";

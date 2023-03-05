@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import "./Digit.scss";
 import { ACTIVE_LINES_BY_NUMBER, TRAPEZOIDS } from "../../utils";
 
-export function Digit({ value }) {
+function Digit({ value }) {
   return (
     <div className="digit-container">
       {TRAPEZOIDS.map((divNumber, index) => {
@@ -29,3 +29,5 @@ Digit.propTypes = {
 Digit.defaultProps = {
   value: 0,
 };
+
+export default Digit;

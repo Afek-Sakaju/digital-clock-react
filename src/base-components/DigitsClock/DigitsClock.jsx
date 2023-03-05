@@ -1,9 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Digit } from "../Digit/Digit";
+import Digit from "../Digit/Digit";
 import "./DigitsClock.scss";
 
-export function DigitsClock({ time }) {
+function DigitsClock({ time }) {
   let [hh, mm, ss] = time?.split(":") ?? ["00", "00", "00"];
   let timeUnits = time?.split(":") ?? ["00", "00", "00"];
   timeUnits.map((unit) => unit.padStart(2, "0"));
@@ -40,3 +40,5 @@ DigitsClock.propTypes = {
 DigitsClock.defaultProps = {
   time: "00:00:00",
 };
+
+export default DigitsClock;

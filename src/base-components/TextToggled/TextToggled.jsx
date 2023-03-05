@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./TextToggled.scss";
 
-export function TextToggled({ label, activeLabel, onClick }) {
+function TextToggled({ label, activeLabel, onClick }) {
   const isActiveLabel = !label?.localeCompare(activeLabel, "en", {
     sensitivity: "base",
   });
@@ -26,3 +26,5 @@ TextToggled.defaultProps = {
   activeLabel: "unknown",
   onClick: undefined,
 };
+
+export default TextToggled;

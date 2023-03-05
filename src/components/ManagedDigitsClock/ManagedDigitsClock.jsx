@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { DigitsClock } from "../../base-components/DigitsClock/DigitsClock";
+import { DigitsClock } from "../../base-components";
 import { getDateFormat } from "../../utils";
 
-export function ManagedDigitsClock({
+function ManagedDigitsClock({
   ampmState,
   updateAmpm,
   localeTime,
@@ -71,3 +71,5 @@ ManagedDigitsClock.defaultProps = {
   useInterval: true,
   mode24H: false,
 };
+
+export default ManagedDigitsClock;

@@ -1,5 +1,5 @@
 import React from "react";
-import { TimeAreaText } from "../TimeAreaText";
+import TimeAreaText from "../TimeAreaText";
 
 export default {
   title: "base-components/TimeAreaText",

@@ -1,5 +1,5 @@
 import React from "react";
-import { Digit } from "../Digit";
+import Digit from "../Digit";
 
 export default {
   title: "base-components/Digit",
