@@ -1,2 +1,2 @@
-export * from "./ManagedDigitsClock/ManagedDigitsClock";
-export * from "./Clock/Clock";
+export * as ManagedDigitsClock from "./ManagedDigitsClock/ManagedDigitsClock";
+export * as Clock from "./Clock/Clock";

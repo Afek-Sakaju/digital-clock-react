@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import DigitsClock from "../../base-components";
+import { DigitsClock } from "../../base-components";
 import { getDateFormat } from "../../utils";
 
 function ManagedDigitsClock({

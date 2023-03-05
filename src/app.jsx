@@ -1,8 +1,8 @@
 import React from "react";
 
-import Clock from "./components";
-import TimeAreaText from "./base-components";
-import { TIME_ZONES, getZoneTimestamp } from "./utils";
+import { Clock } from "./components";
+import { TimeAreaText } from "./base-components";
+import { TIME_ZONES } from "./utils";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
           return (
             <div key={i} className={`clock-and-zone-container`}>
               <TimeAreaText label={zone.name} />
-              <Clock timestamp={getZoneTimestamp(zone)} />
+              <Clock />
             </div>
           );
         })}
