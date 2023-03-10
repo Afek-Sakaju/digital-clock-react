@@ -47,7 +47,7 @@ var TIME_ZONES = [{
   isEarly: true
 }, {
   name: "Japan",
-  diff: 5,
+  diff: 7,
   isEarly: false
 }];
 exports.TIME_ZONES = TIME_ZONES;
