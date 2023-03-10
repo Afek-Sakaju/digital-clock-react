@@ -16,17 +16,17 @@ function DigitsClock({ time }) {
     <div className="numbers-container digit-small">
       <div className="two-digits">
         {hh.split("").map((digit, index) => (
-          <Digit value={+digit} key={`hh ${index}`} />
+          <Digit key={`hh ${index}`} value={+digit} />
         ))}
       </div>
       <div className="two-digits">
         {mm.split("").map((digit, index) => (
-          <Digit value={+digit} key={`mm ${index}`} />
+          <Digit key={`mm ${index}`} value={+digit} />
         ))}
       </div>
       <div className="two-digits">
         {ss.split("").map((digit, index) => (
-          <Digit value={+digit} key={`ss ${index}`} />
+          <Digit key={`ss ${index}`} value={+digit} />
         ))}
       </div>
     </div>
