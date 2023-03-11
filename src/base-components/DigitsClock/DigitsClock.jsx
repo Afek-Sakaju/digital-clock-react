@@ -4,7 +4,7 @@ import Digit from "../Digit/Digit";
 import "./DigitsClock.scss";
 
 export default function DigitsClock({ time }) {
-  let [hh, mm, ss] = time?.split(":") ?? ["00", "00", "00"];
+  let [hh, mm, ss] = time?.split(":");
 
   hh = hh.padStart(2, "0");
   mm = mm.padStart(2, "0");
@@ -36,5 +36,5 @@ DigitsClock.propTypes = {
 };
 
 DigitsClock.defaultProps = {
-  time: undefined,
+  time: "00:00:00",
 };
