@@ -30,7 +30,7 @@ function App() {
     <div className="app-container">
       <Clock
         isMode24H
-        size={"small"}
+        size="small"
         useInterval={false}
         timestamp={MY_REGION_TIMESTAMP}
       />
