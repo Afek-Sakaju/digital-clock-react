@@ -19,9 +19,9 @@ function ManagedDigitsClock({
     const timerInterval =
       useInterval &&
       setInterval(() => {
-        onTimeChange?.((date) => {
-          return getDateFormat(date.timestamp + 1000, date.is24HoursMode);
-        });
+        onTimeChange?.((date) =>
+          getDateFormat(date.timestamp + 1000, date.is24HoursMode)
+        );
       }, 1000);
 
     return () => {
@@ -38,9 +38,9 @@ function ManagedDigitsClock({
   }, [ampm]);
 
   useEffect(() => {
-    onTimeChange?.((date) => {
-      return getDateFormat(date.timestamp, mode24H && ampmState === "PM");
-    });
+    onTimeChange?.((date) =>
+      getDateFormat(date.timestamp, mode24H && ampmState === "PM")
+    );
   }, [mode24H, ampmState]);
 
   return <DigitsClock time={time} />;
@@ -55,7 +55,6 @@ ManagedDigitsClock.propTypes = {
     ampm: PropTypes.string,
   }),
   onTimeChange: PropTypes.func,
-  currentDay: PropTypes.string,
   onDayChange: PropTypes.func,
   useInterval: PropTypes.bool,
   mode24H: PropTypes.bool,
@@ -66,7 +65,6 @@ ManagedDigitsClock.defaultProps = {
   updateAmpm: undefined,
   localeTime: undefined,
   onTimeChange: undefined,
-  currentDay: "noDay",
   onDayChange: undefined,
   useInterval: true,
   mode24H: false,

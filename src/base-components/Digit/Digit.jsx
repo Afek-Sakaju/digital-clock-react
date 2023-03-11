@@ -1,14 +1,14 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./Digit.scss";
+
 import { ACTIVE_LINES_BY_NUMBER, TRAPEZOIDS } from "../../utils";
+import "./Digit.scss";
 
 function Digit({ value }) {
   return (
     <div className="digit-container">
       {TRAPEZOIDS.map((divNumber, index) => {
         const isActive = ACTIVE_LINES_BY_NUMBER[value].includes(divNumber);
-
         return (
           <div
             key={index}

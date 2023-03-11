@@ -1,5 +1,5 @@
 import React from "react";
-import  DigitsClock  from "../DigitsClock";
+import DigitsClock from "../DigitsClock";
 
 export default {
   title: "base-components/DigitsClock",
@@ -41,19 +41,17 @@ Default.decorators = [
   ),
 ];
 
-export const AdjustSize = (props) => {
-  return (
-    <div
-      style={{
-        width: `${props.width}px`,
-        height: `${props.height}px`,
-        border: "1px dashed blue",
-      }}
-    >
-      <DigitsClock />
-    </div>
-  );
-};
+export const AdjustSize = (props) => (
+  <div
+    style={{
+      width: `${props.width}px`,
+      height: `${props.height}px`,
+      border: "1px dashed blue",
+    }}
+  >
+    <DigitsClock />
+  </div>
+);
 AdjustSize.argTypes = {
   width: { control: { type: "number", min: 100, max: 4000, step: 50 } },
   height: { control: { type: "number", min: 100, max: 3000, step: 50 } },

@@ -39,22 +39,20 @@ Default.decorators = [
 
 const Template = (args) => <Digit {...args} />;
 
-export const AdjustableSize = (props) => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        border: "3px red solid",
-        width: `${props.width}px`,
-        height: `${props.height}px`,
-      }}
-    >
-      <Digit value={6} />
-    </div>
-  );
-};
+export const AdjustableSize = (props) => (
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "3px red solid",
+      width: `${props.width}px`,
+      height: `${props.height}px`,
+    }}
+  >
+    <Digit value={6} />
+  </div>
+);
 AdjustableSize.argTypes = {
   width: {
     control: { type: "number", min: 20, max: 3000, step: 30 },

@@ -23,22 +23,20 @@ export default {
 
 export const Default = () => <TimeAreaText />;
 
-export const AdjustableSize = (props) => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        border: "red 3px solid",
-        width: `${props.width}px`,
-        height: `${props.height}px`,
-      }}
-    >
-      <TimeAreaText label={"Japan"} />
-    </div>
-  );
-};
+export const AdjustableSize = (props) => (
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "red 3px solid",
+      width: `${props.width}px`,
+      height: `${props.height}px`,
+    }}
+  >
+    <TimeAreaText label={"Japan"} />
+  </div>
+);
 AdjustableSize.argTypes = {
   width: {
     control: { type: "number", min: 50, max: 3000, step: 50 },

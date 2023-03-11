@@ -28,21 +28,19 @@ export default {
   ],
 };
 
-export const Default = () => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "20%",
-        width: "45%",
-      }}
-    >
-      <ManagedDigitsClock />
-    </div>
-  );
-};
+export const Default = () => (
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "20%",
+      width: "45%",
+    }}
+  >
+    <ManagedDigitsClock />
+  </div>
+);
 
 export const useInterval = () => {
   const [useInterval, setUseInterval] = useState(false);
@@ -73,22 +71,20 @@ export const useInterval = () => {
   );
 };
 
-export const Custom = (props) => {
-  return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        border: "red solid 3px",
-        height: `${props.height}px`,
-        width: `${props.width}px`,
-      }}
-    >
-      <ManagedDigitsClock />
-    </div>
-  );
-};
+export const Custom = (props) => (
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      border: "red solid 3px",
+      height: `${props.height}px`,
+      width: `${props.width}px`,
+    }}
+  >
+    <ManagedDigitsClock />
+  </div>
+);
 Custom.argTypes = {
   height: {
     control: { type: "number", min: 50, max: 2000, step: 50 },
