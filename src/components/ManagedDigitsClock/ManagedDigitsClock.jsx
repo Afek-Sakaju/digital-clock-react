@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import { DigitsClock } from "../../base-components";
 import { getDateFormat } from "../../utils";
 
-function ManagedDigitsClock({
+export default function ManagedDigitsClock({
   ampmState,
   updateAmpm,
   localeTime,
@@ -69,5 +69,3 @@ ManagedDigitsClock.defaultProps = {
   useInterval: true,
   mode24H: false,
 };
-
-export default ManagedDigitsClock;

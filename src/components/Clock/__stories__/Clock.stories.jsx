@@ -11,8 +11,8 @@ export default {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "97vh",
-          width: "97vw",
+          height: "95vh",
+          width: "95vw",
         }}
       >
         <Story />
@@ -21,22 +21,19 @@ export default {
   ],
 };
 
-export const Default = () => <Clock />;
-Default.decorators = [
-  (Story) => (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        height: "400px",
-        width: "800px",
-      }}
-    >
-      <Story />
-    </div>
-  ),
-];
+export const Default = () => (
+  <div
+    style={{
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      height: "20%",
+      width: "45%",
+    }}
+  >
+    <Clock />
+  </div>
+);
 
 const Template = (args) => <Clock {...args} />;
 

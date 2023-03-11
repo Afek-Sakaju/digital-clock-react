@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Digit from "../Digit/Digit";
 import "./DigitsClock.scss";
 
-function DigitsClock({ time }) {
+export default function DigitsClock({ time }) {
   let [hh, mm, ss] = time?.split(":") ?? ["00", "00", "00"];
 
   hh = hh.padStart(2, "0");
@@ -38,5 +38,3 @@ DigitsClock.propTypes = {
 DigitsClock.defaultProps = {
   time: undefined,
 };
-
-export default DigitsClock;

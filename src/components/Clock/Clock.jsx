@@ -6,7 +6,7 @@ import { TextToggled } from "../../base-components";
 import { getDateFormat, CLOCK_SIZES, DAYS_ARRAY } from "../../utils";
 import "./Clock.scss";
 
-function Clock({ size, timestamp, useInterval, isMode24H }) {
+export default function Clock({ size, timestamp, useInterval, isMode24H }) {
   const [mode24H, setMode24H] = useState(isMode24H);
   const [localeTime, onTimeChange] = useState(
     getDateFormat(timestamp, mode24H)
@@ -65,5 +65,3 @@ Clock.defaultProps = {
   useInterval: true,
   isMode24H: false,
 };
-
-export default Clock;
