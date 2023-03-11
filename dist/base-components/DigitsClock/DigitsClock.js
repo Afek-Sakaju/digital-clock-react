@@ -16,13 +16,12 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0) { ; } } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function DigitsClock(_ref) {
-  var _time$split;
   var time = _ref.time;
-  var _ref2 = (_time$split = time === null || time === void 0 ? void 0 : time.split(":")) !== null && _time$split !== void 0 ? _time$split : ["00", "00", "00"],
-    _ref3 = _slicedToArray(_ref2, 3),
-    hh = _ref3[0],
-    mm = _ref3[1],
-    ss = _ref3[2];
+  var _time$split = time === null || time === void 0 ? void 0 : time.split(":"),
+    _time$split2 = _slicedToArray(_time$split, 3),
+    hh = _time$split2[0],
+    mm = _time$split2[1],
+    ss = _time$split2[2];
   hh = hh.padStart(2, "0");
   mm = mm.padStart(2, "0");
   ss = ss.padStart(2, "0");
@@ -55,5 +54,5 @@ DigitsClock.propTypes = {
   time: _propTypes.default.string
 };
 DigitsClock.defaultProps = {
-  time: undefined
+  time: "00:00:00"
 };
