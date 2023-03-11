@@ -4,7 +4,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.default = ManagedDigitsClock;
 var _react = _interopRequireWildcard(require("react"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
 var _baseComponents = require("../../base-components");
@@ -60,7 +60,6 @@ ManagedDigitsClock.propTypes = {
     ampm: _propTypes.default.string
   }),
   onTimeChange: _propTypes.default.func,
-  currentDay: _propTypes.default.string,
   onDayChange: _propTypes.default.func,
   useInterval: _propTypes.default.bool,
   mode24H: _propTypes.default.bool
@@ -70,10 +69,7 @@ ManagedDigitsClock.defaultProps = {
   updateAmpm: undefined,
   localeTime: undefined,
   onTimeChange: undefined,
-  currentDay: "noDay",
   onDayChange: undefined,
   useInterval: true,
   mode24H: false
 };
-var _default = ManagedDigitsClock;
-exports.default = _default;

@@ -3,11 +3,11 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.default = Digit;
 var _react = _interopRequireDefault(require("react"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
-require("./Digit.scss");
 var _utils = require("../../utils");
+require("./Digit.scss");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function Digit(_ref) {
   var value = _ref.value;
@@ -27,5 +27,3 @@ Digit.propTypes = {
 Digit.defaultProps = {
   value: 0
 };
-var _default = Digit;
-exports.default = _default;

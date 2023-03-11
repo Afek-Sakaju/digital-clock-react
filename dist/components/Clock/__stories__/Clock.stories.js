@@ -16,28 +16,25 @@ var _default = {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        height: "97vh",
-        width: "97vw"
+        height: "95vh",
+        width: "95vw"
       }
     }, /*#__PURE__*/_react.default.createElement(Story, null));
   }]
 };
 exports.default = _default;
 var Default = function Default() {
-  return /*#__PURE__*/_react.default.createElement(_Clock.default, null);
-};
-exports.Default = Default;
-Default.decorators = [function (Story) {
   return /*#__PURE__*/_react.default.createElement("div", {
     style: {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      height: "400px",
-      width: "800px"
+      height: "20%",
+      width: "45%"
     }
-  }, /*#__PURE__*/_react.default.createElement(Story, null));
-}];
+  }, /*#__PURE__*/_react.default.createElement(_Clock.default, null));
+};
+exports.Default = Default;
 var Template = function Template(args) {
   return /*#__PURE__*/_react.default.createElement(_Clock.default, args);
 };

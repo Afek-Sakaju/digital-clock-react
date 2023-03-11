@@ -4,7 +4,7 @@ function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" =
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.default = Clock;
 var _react = _interopRequireWildcard(require("react"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
 var _ = require("../");
@@ -96,5 +96,3 @@ Clock.defaultProps = {
   useInterval: true,
   isMode24H: false
 };
-var _default = Clock;
-exports.default = _default;

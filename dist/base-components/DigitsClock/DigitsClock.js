@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.default = DigitsClock;
 var _react = _interopRequireDefault(require("react"));
 var _propTypes = _interopRequireDefault(require("prop-types"));
 var _Digit = _interopRequireDefault(require("../Digit/Digit"));
@@ -16,17 +16,13 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = null == arr ? null : "undefined" != typeof Symbol && arr[Symbol.iterator] || arr["@@iterator"]; if (null != _i) { var _s, _e, _x, _r, _arr = [], _n = !0, _d = !1; try { if (_x = (_i = _i.call(arr)).next, 0 === i) { if (Object(_i) !== _i) return; _n = !1; } else for (; !(_n = (_s = _x.call(_i)).done) && (_arr.push(_s.value), _arr.length !== i); _n = !0) { ; } } catch (err) { _d = !0, _e = err; } finally { try { if (!_n && null != _i.return && (_r = _i.return(), Object(_r) !== _r)) return; } finally { if (_d) throw _e; } } return _arr; } }
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 function DigitsClock(_ref) {
-  var _time$split, _time$split2;
+  var _time$split;
   var time = _ref.time;
   var _ref2 = (_time$split = time === null || time === void 0 ? void 0 : time.split(":")) !== null && _time$split !== void 0 ? _time$split : ["00", "00", "00"],
     _ref3 = _slicedToArray(_ref2, 3),
     hh = _ref3[0],
     mm = _ref3[1],
     ss = _ref3[2];
-  var timeUnits = (_time$split2 = time === null || time === void 0 ? void 0 : time.split(":")) !== null && _time$split2 !== void 0 ? _time$split2 : ["00", "00", "00"];
-  timeUnits.map(function (unit) {
-    return unit.padStart(2, "0");
-  });
   hh = hh.padStart(2, "0");
   mm = mm.padStart(2, "0");
   ss = ss.padStart(2, "0");
@@ -36,22 +32,22 @@ function DigitsClock(_ref) {
     className: "two-digits"
   }, hh.split("").map(function (digit, index) {
     return /*#__PURE__*/_react.default.createElement(_Digit.default, {
-      value: +digit,
-      key: "hh ".concat(index)
+      key: "hh ".concat(index),
+      value: +digit
     });
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "two-digits"
   }, mm.split("").map(function (digit, index) {
     return /*#__PURE__*/_react.default.createElement(_Digit.default, {
-      value: +digit,
-      key: "mm ".concat(index)
+      key: "mm ".concat(index),
+      value: +digit
     });
   })), /*#__PURE__*/_react.default.createElement("div", {
     className: "two-digits"
   }, ss.split("").map(function (digit, index) {
     return /*#__PURE__*/_react.default.createElement(_Digit.default, {
-      value: +digit,
-      key: "ss ".concat(index)
+      key: "ss ".concat(index),
+      value: +digit
     });
   })));
 }
@@ -59,7 +55,5 @@ DigitsClock.propTypes = {
   time: _propTypes.default.string
 };
 DigitsClock.defaultProps = {
-  time: "00:00:00"
+  time: undefined
 };
-var _default = DigitsClock;
-exports.default = _default;
