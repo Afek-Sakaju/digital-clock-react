@@ -31,14 +31,15 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts start",  
+      "build2": "react-scripts build",
     "build-and-publish": "npm run build && npm run publish",
     "publish": "npm publish",
     "build": "del dist && babel src/ --out-dir dist --copy-files",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d docs/build"
   },
   "eslintConfig": {
     "extends": [
