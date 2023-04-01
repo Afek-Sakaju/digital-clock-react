@@ -1,0 +1,30 @@
+body,
+html,
+#master {
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: Helvetica;
+  src: url("./assets/fonts/Helvetica.ttf");
+}
+
+body {
+  font: normal 16px Arial, "Helvetica", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  background-color: rgb(196, 196, 196);
+}
+
+.app-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 98vh;
+  width: 98vw;
+}

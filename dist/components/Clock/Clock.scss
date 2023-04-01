@@ -1,0 +1,75 @@
+@import "../../utils/variables.scss";
+
+.clock-component-container {
+  border: 2px rgba(128, 128, 128, 0.5) solid;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 -1px 5px gray;
+  overflow: hidden;
+}
+
+.days-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+.component-container {
+  padding: 5px 0 0 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: rgb(243, 243, 243);
+  border: 5px rgba(243, 243, 243) solid;
+  height: 100%;
+  width: 100%;
+  gap: 5px;
+}
+
+.clock-small {
+  .component-container {
+    padding: 2px 0 0 0;
+  }
+
+  .text-style {
+    font-size: 11px;
+    font-weight: 900;
+  }
+
+  .bottom-container {
+    font-size: 12px;
+  }
+
+  .two-digits:after {
+    font-size: 2em;
+    right: -8px;
+  }
+
+  .days-container {
+    padding-bottom: 1px;
+    gap: 6px;
+  }
+
+  .component-container {
+    gap: 0px;
+  }
+}
+
+.bottom-container {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  justify-content: flex-end;
+  gap: 5px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.digits-container {
+  height: 55%;
+  width: 80%;
+}
