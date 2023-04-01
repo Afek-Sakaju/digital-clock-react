@@ -6,6 +6,10 @@
 
 ---
 
+**Live demo:**</br>[digital](http://afektheminilearner.github.io/digital-clock-react)
+
+---
+
 ## Configuration Options
 
 ### This digital clock component offers a variety of configuration options to customize its appearance and functionality, including:

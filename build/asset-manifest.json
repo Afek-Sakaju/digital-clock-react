@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.38da5ce4.css",
-    "main.js": "/static/js/main.f7b1164c.js",
-    "static/media/Helvetica.ttf": "/static/media/Helvetica.06113bf748ae7dc33e05.ttf",
-    "index.html": "/index.html",
-    "main.38da5ce4.css.map": "/static/css/main.38da5ce4.css.map",
-    "main.f7b1164c.js.map": "/static/js/main.f7b1164c.js.map"
+    "main.css": "/digital-clock-react/static/css/main.e220c3b6.css",
+    "main.js": "/digital-clock-react/static/js/main.33f7cd11.js",
+    "static/media/Helvetica.ttf": "/digital-clock-react/static/media/Helvetica.06113bf748ae7dc33e05.ttf",
+    "index.html": "/digital-clock-react/index.html",
+    "main.e220c3b6.css.map": "/digital-clock-react/static/css/main.e220c3b6.css.map",
+    "main.33f7cd11.js.map": "/digital-clock-react/static/js/main.33f7cd11.js.map"
   },
   "entrypoints": [
-    "static/css/main.38da5ce4.css",
-    "static/js/main.f7b1164c.js"
+    "static/css/main.e220c3b6.css",
+    "static/js/main.33f7cd11.js"
   ]
 }

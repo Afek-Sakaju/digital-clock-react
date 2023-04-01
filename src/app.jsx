@@ -9,9 +9,9 @@ function App() {
     <div className="app-container">
       {TIME_ZONES.map((zone, i) => {
         return (
-          <div key={i} className={`clock-and-zone-container`}>
+          <div key={i} className="clock-and-zone-container">
             <TimeAreaText label={zone.name} />
-            <Clock timestamp={getZoneTimestamp(zone)} />
+            <Clock timestamp={getZoneTimestamp(zone)}/>
           </div>
         );
       })}
