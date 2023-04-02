@@ -41,7 +41,6 @@ export default function Clock({ size, timestamp, useInterval, isMode24H }) {
           className="bottom-container"
           onClick={() => setMode24H((m) => !m)}
           onKeyDown={() => setMode24H((m) => !m)}
-          role="presentation"
         >
           {mode24H ? (
             <TextToggled label="24H" activeLabel="24H" />

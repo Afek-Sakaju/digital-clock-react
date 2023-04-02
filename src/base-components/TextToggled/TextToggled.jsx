@@ -13,7 +13,6 @@ export default function TextToggled({ label, activeLabel, onClick }) {
       className={className}
       onClick={onClick}
       onKeyDown={onClick}
-      role="presentation"
     >
       {label}
     </div>
