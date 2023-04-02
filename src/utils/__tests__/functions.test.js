@@ -1,4 +1,4 @@
-import { getDateFormat } from "../";
+import { getDateFormat } from "..";
 
 describe("getDateFormat tests", () => {
   test.each([
@@ -6,16 +6,6 @@ describe("getDateFormat tests", () => {
       1677237155,
       { day: "Fri", time: "13:12:35", ampm: "PM", timestamp: 1677237155 },
     ],
-    //  [
-    //      1677237155,
-    //      { day: "Fri", time: "13:12:35", ampm: "PM", timestamp: 1677237155 },
-    //    ],    [
-    //      1677237155,
-    //      { day: "Fri", time: "13:12:35", ampm: "PM", timestamp: 1677237155 },
-    //    ],    [
-    //      1677237155,
-    //      { day: "Fri", time: "13:12:35", ampm: "PM", timestamp: 1677237155 },
-    //    ],
   ])(
     "function accepts timestamp:%s then returns date:%s",
     (timestamp, result) => {

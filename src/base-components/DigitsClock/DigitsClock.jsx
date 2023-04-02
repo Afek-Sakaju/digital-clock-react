@@ -4,11 +4,11 @@ import Digit from "../Digit/Digit";
 import "./DigitsClock.scss";
 
 export default function DigitsClock({ time }) {
-  let [hh, mm, ss] = time?.split(":");
+  let [hh, mm, ss] = time?.split(":") || [];
 
-  hh = hh.padStart(2, "0");
-  mm = mm.padStart(2, "0");
-  ss = ss.padStart(2, "0");
+  hh = hh?.padStart(2, "0");
+  mm = mm?.padStart(2, "0");
+  ss = ss?.padStart(2, "0");
 
   return (
     <div className="numbers-container digit-small">

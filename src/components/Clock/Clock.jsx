@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
-import { ManagedDigitsClock } from "../";
+import ManagedDigitsClock from "../ManagedDigitsClock/ManagedDigitsClock";
 import { TextToggled } from "../../base-components";
 import { getDateFormat, CLOCK_SIZES, DAYS_ARRAY } from "../../utils";
 import "./Clock.scss";
@@ -13,7 +13,7 @@ export default function Clock({ size, timestamp, useInterval, isMode24H }) {
   );
   const [currentDay, setCurrentDay] = useState(localeTime.day);
   const [ampmState, setAmPmState] = useState(localeTime.ampm);
-  const sizeObject = CLOCK_SIZES[size] || CLOCK_SIZES["medium"];
+  const sizeObject = CLOCK_SIZES[size] || CLOCK_SIZES.medium;
   return (
     <div
       className={`clock-component-container clock-${size}`}
@@ -37,13 +37,18 @@ export default function Clock({ size, timestamp, useInterval, isMode24H }) {
             mode24H={mode24H}
           />
         </div>
-        <div className="bottom-container" onClick={() => setMode24H((m) => !m)}>
+        <div
+          className="bottom-container"
+          onClick={() => setMode24H((m) => !m)}
+          onKeyDown={() => setMode24H((m) => !m)}
+          role="presentation"
+        >
           {mode24H ? (
-            <TextToggled label={"24H"} activeLabel={"24H"} />
+            <TextToggled label="24H" activeLabel="24H" />
           ) : (
             <>
-              <TextToggled label={"AM"} activeLabel={ampmState} />
-              <TextToggled label={"PM"} activeLabel={ampmState} />
+              <TextToggled label="AM" activeLabel={ampmState} />
+              <TextToggled label="PM" activeLabel={ampmState} />
             </>
           )}
         </div>

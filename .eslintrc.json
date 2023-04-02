@@ -1,9 +1,16 @@
 {
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "jest/globals": true
   },
-  "ignorePatterns": ["node_modules", "**/*.stories.jsx", "**/*.stories.js"],
+  "ignorePatterns": [
+    "node_modules",
+    "**/*.stories.jsx",
+    "**/*.stories.js",
+    "dist",
+    "build"
+  ],
   "overrides": [],
   "parserOptions": {
     "ecmaVersion": "latest",
@@ -16,8 +23,9 @@
     "plugin:prettier/recommended",
     "airbnb/hooks"
   ],
-  "plugins": ["react", "prettier"],
+  "plugins": ["react", "prettier", "jest"],
   "rules": {
+    "react/no-array-index-key": 0,
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
     "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
     "prettier/prettier": 0,

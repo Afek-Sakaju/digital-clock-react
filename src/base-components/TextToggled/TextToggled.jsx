@@ -9,7 +9,12 @@ export default function TextToggled({ label, activeLabel, onClick }) {
   const className = isActiveLabel ? "text-style" : "text-style passive";
 
   return (
-    <div className={className} onClick={onClick}>
+    <div
+      className={className}
+      onClick={onClick}
+      onKeyDown={onClick}
+      role="presentation"
+    >
       {label}
     </div>
   );
