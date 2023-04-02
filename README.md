@@ -27,7 +27,7 @@
 
 ```js
 import React from "react";
-import { Clock } from "digital-clock-react";
+import Clock from "digital-clock-react";
 
 function App() {
   return (
