@@ -8,6 +8,9 @@ export function getZoneTimestamp(zone) {
     : currentTimestamp + zone.diff * 1000 * 60 * 60;
 }
 
+/* The function "assertTwoDigitsTimeUnits" object of time units {hours, minutes, seconds} 
+then modify all the time units so every time unit be made of 2 digits,
+the function returns all the units combined into string */
 export function assertTwoDigitsTimeUnits({
   hours = 0,
   minutes = 0,
