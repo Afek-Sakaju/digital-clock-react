@@ -44,7 +44,7 @@ function ManagedDigitsClock(_ref) {
   }, [ampm]);
   (0, _react.useEffect)(function () {
     onTimeChange === null || onTimeChange === void 0 ? void 0 : onTimeChange(function (date) {
-      return (0, _utils.getDateFormat)(date.timestamp, mode24H && ampmState === "PM");
+      return (0, _utils.getDateFormat)(date.timestamp, mode24H);
     });
   }, [mode24H, ampmState]);
   return /*#__PURE__*/_react.default.createElement(_baseComponents.DigitsClock, {

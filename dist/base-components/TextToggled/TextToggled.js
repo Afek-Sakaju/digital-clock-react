@@ -10,24 +10,22 @@ require("./TextToggled.scss");
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 function TextToggled(_ref) {
   var label = _ref.label,
-    activeLabel = _ref.activeLabel,
+    isActive = _ref.isActive,
     onClick = _ref.onClick;
-  var isActiveLabel = !(label !== null && label !== void 0 && label.localeCompare(activeLabel, "en", {
-    sensitivity: "base"
-  }));
-  var className = isActiveLabel ? "text-style" : "text-style passive";
+  var className = isActive ? "text-style" : "text-style passive";
   return /*#__PURE__*/_react.default.createElement("div", {
     className: className,
-    onClick: onClick
+    onClick: onClick,
+    onKeyDown: onClick
   }, label);
 }
 TextToggled.propTypes = {
   label: _propTypes.default.string,
-  activeLabel: _propTypes.default.string,
+  isActive: _propTypes.default.bool,
   onClick: _propTypes.default.func
 };
 TextToggled.defaultProps = {
-  label: "unknown",
-  activeLabel: "unknown",
+  label: "unTitled",
+  isActive: false,
   onClick: undefined
 };

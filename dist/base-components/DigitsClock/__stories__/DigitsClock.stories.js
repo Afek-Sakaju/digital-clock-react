@@ -34,9 +34,8 @@ Default.decorators = [function (Story) {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      boxSizing: "borderBox",
-      height: "15%",
-      width: "40%",
+      height: "200px",
+      width: "500px",
       border: "1px solid black"
     }
   }, /*#__PURE__*/_react.default.createElement(Story, null));
@@ -58,7 +57,8 @@ AdjustSize.argTypes = {
       min: 100,
       max: 4000,
       step: 50
-    }
+    },
+    defaultValue: 500
   },
   height: {
     control: {
@@ -66,15 +66,12 @@ AdjustSize.argTypes = {
       min: 100,
       max: 3000,
       step: 50
-    }
+    },
+    defaultValue: 200
   },
   time: {
     control: false
   }
-};
-AdjustSize.args = {
-  width: 200,
-  height: 100
 };
 var Template = function Template(args) {
   return /*#__PURE__*/_react.default.createElement(_DigitsClock.default, args);
@@ -90,9 +87,8 @@ Custom.decorators = [function (Story) {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      boxSizing: "borderBox",
-      height: "20%",
-      width: "50%",
+      height: "200px",
+      width: "500px",
       border: "1px solid black"
     }
   }, /*#__PURE__*/_react.default.createElement(Story, null));

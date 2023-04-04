@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.TRAPEZOIDS = exports.TIME_ZONES = exports.DAYS_ARRAY = exports.CLOCK_SIZES = exports.ACTIVE_LINES_BY_NUMBER = void 0;
-var DAYS_ARRAY = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+var DAYS_ARRAY = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 exports.DAYS_ARRAY = DAYS_ARRAY;
 var TRAPEZOIDS = [1, 2, 3, 4, 5, 6, 7];
 

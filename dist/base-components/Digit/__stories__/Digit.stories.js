@@ -63,7 +63,7 @@ AdjustableSize.argTypes = {
       max: 3000,
       step: 30
     },
-    defaultValue: 50
+    defaultValue: 100
   },
   height: {
     control: {
@@ -72,7 +72,7 @@ AdjustableSize.argTypes = {
       max: 3000,
       step: 30
     },
-    defaultValue: 50
+    defaultValue: 200
   },
   value: {
     control: false

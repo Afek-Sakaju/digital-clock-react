@@ -1,6 +1,5 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-// import { Clock } from "./components";
 
 import App from "./App";
 import "./index.css";
@@ -10,4 +9,5 @@ const root = createRoot(rootElement);
 
 root.render(<App />);
 
-// export default Clock;
+// eslint-disable-next-line import/prefer-default-export
+export { Clock } from "./components";

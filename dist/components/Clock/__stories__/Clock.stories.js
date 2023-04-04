@@ -29,8 +29,8 @@ var Default = function Default() {
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      height: "20%",
-      width: "45%"
+      height: "200px",
+      width: "600px"
     }
   }, /*#__PURE__*/_react.default.createElement(_Clock.default, null));
 };
@@ -54,7 +54,8 @@ Custom.decorators = [function (Story) {
 Custom.argTypes = {
   size: {
     control: "inline-radio",
-    options: ["normal", "small"]
+    options: ["normal", "small"],
+    defaultValue: "normal"
   },
   timestamp: {
     control: false
