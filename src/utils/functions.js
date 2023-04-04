@@ -8,25 +8,16 @@ export function getZoneTimestamp(zone) {
     : currentTimestamp + zone.diff * 1000 * 60 * 60;
 }
 
-export function assertTwoDigitsTimeUnits({ hours, minutes, seconds }) {
-  hours = `${hours}`.padStart(2, "0");
-  minutes = `${minutes}`.padStart(2, "0");
-  seconds = `${seconds}`.padStart(2, "0");
+export function assertTwoDigitsTimeUnits({
+  hours = 0,
+  minutes = 0,
+  seconds = 0,
+}) {
+  hours = `${hours}`?.padStart(2, "0");
+  minutes = `${minutes}`?.padStart(2, "0");
+  seconds = `${seconds}`?.padStart(2, "0");
 
   return [hours, minutes, seconds].join(":");
-}
-
-export function getTimePropertiesFromDate(date, is24HoursMode) {
-  const day = DAYS_ARRAY[date.getDay()];
-  let hours = date.getHours();
-  const minutes = date.getMinutes();
-  const seconds = date.getSeconds();
-  const ampm = hours >= 12 ? "PM" : "AM";
-
-  if (!is24HoursMode) hours %= 12;
-
-  const time = assertTwoDigitsTimeUnits({ hours, minutes, seconds });
-  return { time, day, ampm };
 }
 
 /* The function "getDateFormat" accepts number "timestamp" then returns object
@@ -38,13 +29,24 @@ export function getDateFormat(
   is24HoursMode = undefined
 ) {
   const date = typeof timestamp !== "number" ? new Date() : new Date(timestamp);
-  const { time, day, ampm } = getTimePropertiesFromDate(date, is24HoursMode);
+
+  const currentTimestamp = date.getTime();
+  const day = DAYS_ARRAY[date.getDay()];
+
+  let hours = date.getHours();
+  const minutes = date.getMinutes();
+  const seconds = date.getSeconds();
+  const ampm = hours >= 12 ? "PM" : "AM";
+
+  if (!is24HoursMode) hours %= 12;
+
+  const time = assertTwoDigitsTimeUnits({ hours, minutes, seconds });
 
   return {
     day,
     time,
     ampm,
-    timestamp: date.getTime(),
+    timestamp: currentTimestamp,
     is24HoursMode,
   };
 }
