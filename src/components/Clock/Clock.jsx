@@ -22,7 +22,7 @@ export default function Clock({ size, timestamp, useInterval, isMode24H }) {
       <div className="component-container">
         <div className="days-container">
           {DAYS_ARRAY.map((day, i) => (
-            <TextToggled key={i} label={day} activeLabel={currentDay} />
+            <TextToggled key={i} label={day} isActive={currentDay === day} />
           ))}
         </div>
         <div className="digits-container">
@@ -43,11 +43,11 @@ export default function Clock({ size, timestamp, useInterval, isMode24H }) {
           onKeyDown={() => setMode24H((m) => !m)}
         >
           {mode24H ? (
-            <TextToggled label="24H" activeLabel="24H" />
+            <TextToggled label="24H" isActive={mode24H} />
           ) : (
             <>
-              <TextToggled label="AM" activeLabel={ampmState} />
-              <TextToggled label="PM" activeLabel={ampmState} />
+              <TextToggled label="AM" isActive={ampmState === "AM"} />
+              <TextToggled label="PM" isActive={ampmState === "PM"} />
             </>
           )}
         </div>

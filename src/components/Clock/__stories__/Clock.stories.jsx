@@ -27,8 +27,8 @@ export const Default = () => (
       display: "flex",
       justifyContent: "center",
       alignItems: "center",
-      height: "20%",
-      width: "45%",
+      height: "200px",
+      width: "600px",
     }}
   >
     <Clock />
@@ -54,6 +54,10 @@ Custom.decorators = [
   ),
 ];
 Custom.argTypes = {
-  size: { control: "inline-radio", options: ["normal", "small"] },
+  size: {
+    control: "inline-radio",
+    options: ["normal", "small"],
+    defaultValue: "normal",
+  },
   timestamp: { control: false },
 };

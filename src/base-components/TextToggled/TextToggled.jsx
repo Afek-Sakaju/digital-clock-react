@@ -2,18 +2,11 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./TextToggled.scss";
 
-export default function TextToggled({ label, activeLabel, onClick }) {
-  const isActiveLabel = !label?.localeCompare(activeLabel, "en", {
-    sensitivity: "base",
-  });
-  const className = isActiveLabel ? "text-style" : "text-style passive";
+export default function TextToggled({ label, isActive, onClick }) {
+  const className = isActive ? "text-style" : "text-style passive";
 
   return (
-    <div
-      className={className}
-      onClick={onClick}
-      onKeyDown={onClick}
-    >
+    <div className={className} onClick={onClick} onKeyDown={onClick}>
       {label}
     </div>
   );
@@ -21,12 +14,12 @@ export default function TextToggled({ label, activeLabel, onClick }) {
 
 TextToggled.propTypes = {
   label: PropTypes.string,
-  activeLabel: PropTypes.string,
+  isActive: PropTypes.bool,
   onClick: PropTypes.func,
 };
 
 TextToggled.defaultProps = {
-  label: "unknown",
-  activeLabel: "unknown",
+  label: "unTitled",
+  isActive: false,
   onClick: undefined,
 };
