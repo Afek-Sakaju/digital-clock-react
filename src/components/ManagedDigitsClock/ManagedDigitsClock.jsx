@@ -39,7 +39,7 @@ export default function ManagedDigitsClock({
 
   useEffect(() => {
     onTimeChange?.((date) =>
-      getDateFormat(date.timestamp, mode24H && ampmState === "PM")
+      getDateFormat(date.timestamp, mode24H)
     );
   }, [mode24H, ampmState]);
 

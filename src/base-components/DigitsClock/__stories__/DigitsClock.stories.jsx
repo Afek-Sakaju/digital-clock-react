@@ -30,9 +30,8 @@ Default.decorators = [
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        boxSizing: "borderBox",
-        height: "15%",
-        width: "40%",
+        height: "200px",
+        width: "500px",
         border: "1px solid black",
       }}
     >
@@ -53,13 +52,20 @@ export const AdjustSize = (props) => (
   </div>
 );
 AdjustSize.argTypes = {
-  width: { control: { type: "number", min: 100, max: 4000, step: 50 } },
-  height: { control: { type: "number", min: 100, max: 3000, step: 50 } },
+  width: {
+    control: {
+      type: "number",
+      min: 100,
+      max: 4000,
+      step: 50,
+    },
+    defaultValue: 500,
+  },
+  height: {
+    control: { type: "number", min: 100, max: 3000, step: 50 },
+    defaultValue: 200,
+  },
   time: { control: false },
-};
-AdjustSize.args = {
-  width: 200,
-  height: 100,
 };
 
 const Template = (args) => <DigitsClock {...args} />;
@@ -75,9 +81,8 @@ Custom.decorators = [
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        boxSizing: "borderBox",
-        height: "20%",
-        width: "50%",
+        height: "200px",
+        width: "500px",
         border: "1px solid black",
       }}
     >

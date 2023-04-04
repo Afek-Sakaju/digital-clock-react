@@ -1,4 +1,5 @@
 import React from "react";
+
 import Digit from "../Digit";
 
 export default {
@@ -56,11 +57,11 @@ export const AdjustableSize = (props) => (
 AdjustableSize.argTypes = {
   width: {
     control: { type: "number", min: 20, max: 3000, step: 30 },
-    defaultValue: 50,
+    defaultValue: 100,
   },
   height: {
     control: { type: "number", min: 30, max: 3000, step: 30 },
-    defaultValue: 50,
+    defaultValue: 200,
   },
   value: { control: false },
 };
