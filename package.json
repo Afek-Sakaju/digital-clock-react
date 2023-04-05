@@ -39,7 +39,8 @@
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
     "predeploy": "react-scripts build",
-    "deploy": "gh-pages -d docs/build"
+    "deploy": "gh-pages -d docs/build",
+    "build-jsdocs": "jsdoc src/utils/functions.js -d js-docs"
   },
   "browserslist": {
     "production": [
