@@ -1,13 +1,5 @@
 import { DAYS_ARRAY } from "./consts";
 
-export function getZoneTimestamp(zone) {
-  const currentTimestamp = new Date().getTime();
-
-  return zone.isEarly
-    ? currentTimestamp - zone.diff * 1000 * 60 * 60
-    : currentTimestamp + zone.diff * 1000 * 60 * 60;
-}
-
 /**
  * Modifies the given time units {hours, minutes, seconds} to ensure that each unit
  * consists of two digits. Returns all the units combined into a string format "HH:MM:SS".

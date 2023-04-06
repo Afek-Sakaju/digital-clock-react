@@ -26,13 +26,6 @@ export const ACTIVE_LINES_BY_NUMBER = {
   9: [1, 2, 3, 4, 6, 7],
 };
 
-export const TIME_ZONES = [
-  { name: "Israel", diff: 0, isEarly: true },
-  { name: "United-States", diff: 5, isEarly: true },
-  { name: "England", diff: 2, isEarly: true },
-  { name: "Japan", diff: 7, isEarly: false },
-];
-
 export const CLOCK_SIZES = {
   small: { width: "200px", height: "80px" },
   medium: { width: "250px", height: "100px" },
