@@ -5,9 +5,9 @@ import { Clock } from "./components";
 function App() {
   return (
     <div className="app-container">
-      <Clock size="small" />
+      <Clock />
       <Clock size="medium" timestamp={123100231459} />
-    </div>
+      <Clock size="large" timestamp={1231002314589} />    </div>
   );
 }
 
