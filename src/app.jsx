@@ -5,7 +5,8 @@ import { Clock } from "./components";
 function App() {
   return (
     <div className="app-container">
-      <Clock timestamp={zone.timestamp} />
+      <Clock size="small" />
+      <Clock size="medium" timestamp={123100231459} />
     </div>
   );
 }
