@@ -21,14 +21,7 @@ Object.defineProperty(exports, "TextToggled", {
     return _TextToggled.default;
   }
 });
-Object.defineProperty(exports, "TimeAreaText", {
-  enumerable: true,
-  get: function get() {
-    return _TimeAreaText.default;
-  }
-});
 var _Digit = _interopRequireDefault(require("./Digit/Digit"));
 var _DigitsClock = _interopRequireDefault(require("./DigitsClock/DigitsClock"));
-var _TimeAreaText = _interopRequireDefault(require("./TimeAreaText/TimeAreaText"));
 var _TextToggled = _interopRequireDefault(require("./TextToggled/TextToggled"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }

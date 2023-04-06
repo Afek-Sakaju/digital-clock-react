@@ -3,7 +3,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.TRAPEZOIDS = exports.TIME_ZONES = exports.DAYS_ARRAY = exports.CLOCK_SIZES = exports.ACTIVE_LINES_BY_NUMBER = void 0;
+exports.TRAPEZOIDS = exports.DAYS_ARRAY = exports.CLOCK_SIZES = exports.ACTIVE_LINES_BY_NUMBER = void 0;
 var DAYS_ARRAY = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 exports.DAYS_ARRAY = DAYS_ARRAY;
 var TRAPEZOIDS = [1, 2, 3, 4, 5, 6, 7];
@@ -33,24 +33,6 @@ var ACTIVE_LINES_BY_NUMBER = {
   9: [1, 2, 3, 4, 6, 7]
 };
 exports.ACTIVE_LINES_BY_NUMBER = ACTIVE_LINES_BY_NUMBER;
-var TIME_ZONES = [{
-  name: "Israel",
-  diff: 0,
-  isEarly: true
-}, {
-  name: "United-States",
-  diff: 5,
-  isEarly: true
-}, {
-  name: "England",
-  diff: 2,
-  isEarly: true
-}, {
-  name: "Japan",
-  diff: 7,
-  isEarly: false
-}];
-exports.TIME_ZONES = TIME_ZONES;
 var CLOCK_SIZES = {
   small: {
     width: "200px",
@@ -58,7 +40,11 @@ var CLOCK_SIZES = {
   },
   medium: {
     width: "250px",
-    height: "100px"
+    height: "110px"
+  },
+  large: {
+    width: "300px",
+    height: "140px"
   }
 };
 exports.CLOCK_SIZES = CLOCK_SIZES;

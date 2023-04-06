@@ -5,16 +5,20 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.assertTwoDigitsTimeUnits = assertTwoDigitsTimeUnits;
 exports.getDateFormat = getDateFormat;
-exports.getZoneTimestamp = getZoneTimestamp;
 var _consts = require("./consts");
-function getZoneTimestamp(zone) {
-  var currentTimestamp = new Date().getTime();
-  return zone.isEarly ? currentTimestamp - zone.diff * 1000 * 60 * 60 : currentTimestamp + zone.diff * 1000 * 60 * 60;
-}
+// eslint-disable-next-line import/no-cycle
 
-/* The function "assertTwoDigitsTimeUnits" object of time units {hours, minutes, seconds} 
-then modify all the time units so every time unit be made of 2 digits,
-the function returns all the units combined into string */
+/**
+ * Modifies the given time units {hours, minutes, seconds} to ensure that each unit
+ * consists of two digits. Returns all the units combined into a string format "HH:MM:SS".
+ *
+ * @param {Object} timeUnits - An object containing time units: {hours, minutes, seconds}.
+ * @param {number} timeUnits.hours - The number of hours to format.
+ * @param {number} timeUnits.minutes - The number of minutes to format.
+ * @param {number} timeUnits.seconds - The number of seconds to format.
+ *
+ * @returns {string} - The formatted time units in the format "HH:MM:SS".
+ */
 function assertTwoDigitsTimeUnits(_ref) {
   var _ref2, _ref3, _ref4;
   var _ref$hours = _ref.hours,
@@ -29,10 +33,21 @@ function assertTwoDigitsTimeUnits(_ref) {
   return [hours, minutes, seconds].join(":");
 }
 
-/* The function "getDateFormat" accepts number "timestamp" then returns object
-of the date properties from the timestamp provided, for example: 
-{day:'Sat', time:'02:05:55', ampm:'AM', timestamp: 1675137155, is24HoursMode: false}
-if timestamp not provided, returns current date. */
+/**
+ *
+ * The function "getDateFormat" accepts a number "timestamp" and returns an object
+ * containing the date properties from the provided timestamp.
+ * If no timestamp is provided, it returns the current date.
+ * @param {number} [timestamp] - The timestamp to generate the date properties from.
+ * @param {boolean} [is24HoursMode] - If true, uses 24-hour format instead of 12-hour format.
+ * @returns {{
+ *   day: string,
+ *   time: string,
+ *   ampm: string,
+ *   timestamp: number,
+ *   is24HoursMode: boolean
+ *   }} - An object containing the date properties.
+ */
 function getDateFormat() {
   var timestamp = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : undefined;
   var is24HoursMode = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : undefined;

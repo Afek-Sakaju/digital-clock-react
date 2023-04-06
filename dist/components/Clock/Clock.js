@@ -90,7 +90,7 @@ function Clock(_ref) {
   })))));
 }
 Clock.propTypes = {
-  size: _propTypes.default.string,
+  size: _propTypes.default.oneOf(_utils.CLOCK_SIZES),
   timestamp: _propTypes.default.number,
   useInterval: _propTypes.default.bool,
   isMode24H: _propTypes.default.bool
