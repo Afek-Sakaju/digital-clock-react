@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-cycle
-import { DAYS_ARRAY } from "./consts";
+import { DAYS_ARRAY } from "@utils/consts";
 
 /**
  * Modifies the given time units {hours, minutes, seconds} to ensure that each unit

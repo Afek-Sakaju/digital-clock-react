@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import "./Clock.scss";
 import { TextToggled } from "@base-components";
 import ManagedDigitsClock from "@components/ManagedDigitsClock/ManagedDigitsClock";
-import { getDateFormat, CLOCK_SIZES, DAYS_ARRAY } from "../../utils";
+import { getDateFormat, CLOCK_SIZES, DAYS_ARRAY } from "@utils";
 
 export default function Clock({ size, timestamp, useInterval, isMode24H }) {
   const [mode24H, setMode24H] = useState(isMode24H);
