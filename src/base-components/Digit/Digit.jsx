@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import { ACTIVE_LINES_BY_NUMBER, TRAPEZOIDS } from "@utils";
 import "./Digit.scss";
+import { ACTIVE_LINES_BY_NUMBER, TRAPEZOIDS } from "@utils";
 
 export default function Digit({ value }) {
   return (
