@@ -41,10 +41,6 @@ var CLOCK_SIZES = {
   medium: {
     width: "250px",
     height: "110px"
-  },
-  large: {
-    width: "300px",
-    height: "140px"
   }
 };
 exports.CLOCK_SIZES = CLOCK_SIZES;
