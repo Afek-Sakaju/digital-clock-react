@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { Clock } from "./components";
+import { Clock } from "@components";
 import { CLOCK_SIZES } from "./utils";
 
 function App() {

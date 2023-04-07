@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
-import { DigitsClock } from "../../base-components";
+import { DigitsClock } from "@base-components";
 import { getDateFormat } from "../../utils";
 
 export default function ManagedDigitsClock({
@@ -38,9 +38,7 @@ export default function ManagedDigitsClock({
   }, [ampm]);
 
   useEffect(() => {
-    onTimeChange?.((date) =>
-      getDateFormat(date.timestamp, mode24H)
-    );
+    onTimeChange?.((date) => getDateFormat(date.timestamp, mode24H));
   }, [mode24H, ampmState]);
 
   return <DigitsClock time={time} />;

@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+
 import "./TextToggled.scss";
 
 export default function TextToggled({ label, isActive, onClick }) {
