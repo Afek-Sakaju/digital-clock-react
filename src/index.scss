@@ -1,0 +1,61 @@
+body,
+html,
+#master {
+  height: 100%;
+  width: 100%;
+}
+
+@font-face {
+  font-family: Helvetica;
+  src: url("./assets/fonts/Helvetica.ttf");
+}
+
+body {
+  font: normal 16px Arial, "Helvetica", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  width: 800px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px 10px rgba(98, 98, 98, 0.1) inset,
+    0 0 25px -4px rgba(0, 0, 0, 0.3);
+  & > * {
+    width: 100%;
+    flex: 1 1 auto;
+  }
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+
+  h3 {
+    font-weight: bolder;
+    font-size: 1.5em;
+  }
+
+  label {
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  input {
+    height: 20px;
+    width: 30px;
+    cursor: pointer;
+  }
+}

@@ -57,7 +57,7 @@ export default function Clock({ size, timestamp, useInterval, isMode24H }) {
 }
 
 Clock.propTypes = {
-  size: PropTypes.oneOf(CLOCK_SIZES),
+  size: PropTypes.oneOf(Object.keys(CLOCK_SIZES)),
   timestamp: PropTypes.number,
   useInterval: PropTypes.bool,
   isMode24H: PropTypes.bool,

@@ -14,7 +14,7 @@
 
 ### This digital clock component offers a variety of configuration options to customize its appearance and functionality, including:
 
-- **size**: The clock face can be displayed in 3 sizes: large, medium, small.
+- **size**: The clock face can be displayed in 2 sizes: medium/small.
 - **timestamp**: The clock can display a specific timestamp, allowing you to represent any given time.
 - **isMode24H(24/12 Hours Mode)**: The clock can be displayed in either 12-hour or 24-hour mode.
 - **useInterval**: Its optional to use the clock as static clock, and to turn off the interval.

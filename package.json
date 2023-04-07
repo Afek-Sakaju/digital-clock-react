@@ -31,7 +31,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts build",
+    "start": "react-scripts start",
     "build-and-publish": "npm run build && npm run publish",
     "publish": "npm publish",
     "build": "del dist && babel src/ --out-dir dist --copy-files",

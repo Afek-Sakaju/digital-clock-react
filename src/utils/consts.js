@@ -29,5 +29,4 @@ export const ACTIVE_LINES_BY_NUMBER = {
 export const CLOCK_SIZES = {
   small: { width: "200px", height: "80px" },
   medium: { width: "250px", height: "110px" },
-  large: { width: "300px", height: "140px" },
 };
