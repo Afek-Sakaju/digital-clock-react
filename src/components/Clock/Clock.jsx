@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 
+import { TextToggled } from "@src/base-components";
 import ManagedDigitsClock from "../ManagedDigitsClock/ManagedDigitsClock";
-import { TextToggled } from "../../base-components";
 import { getDateFormat, CLOCK_SIZES, DAYS_ARRAY } from "../../utils";
 import "./Clock.scss";
 
