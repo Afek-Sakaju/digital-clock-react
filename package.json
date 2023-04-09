@@ -1,11 +1,13 @@
 {
   "name": "digital-clock-react",
-  "description": "Digital Clock, adjustable time",
+  "description": "Digital Clock configurable component",
   "author": "afek-sakaju",
   "homepage": "http://afektheminilearner.github.io/digital-clock-react",
   "keywords": [
-    "react",
-    "components"
+    "clock",
+    "digital-clock",
+    "time",
+    "react"
   ],
   "version": "1.0.5",
   "private": false,
