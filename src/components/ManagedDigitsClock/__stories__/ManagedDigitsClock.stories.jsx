@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import ManagedDigitsClock from "../ManagedDigitsClock";
-import { getDateFormat } from "../../../utils";
+import ManagedDigitsClock from "@components/ManagedDigitsClock";
+import { getDateFormat } from "@utils";
 
 const flexCentered = {
   display: "flex",
