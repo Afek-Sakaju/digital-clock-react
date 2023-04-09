@@ -1,6 +1,6 @@
 import React from "react";
 
-import Digit from "@base-components/Digit";
+import Digit from "../Digit";
 
 export default {
   title: "base-components/Digit",
