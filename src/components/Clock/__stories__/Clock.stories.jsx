@@ -1,6 +1,7 @@
 import React from "react";
 
 import Clock from "../Clock";
+import { CLOCK_SIZES } from "@utils";
 
 export default {
   title: "components/Clock",
@@ -57,8 +58,8 @@ Custom.decorators = [
 Custom.argTypes = {
   size: {
     control: "inline-radio",
-    options: ["normal", "small"],
-    defaultValue: "normal",
+    options: Object.keys(CLOCK_SIZES ?? {}),
+    defaultValue: Object.keys(CLOCK_SIZES ?? {})?.[0],
   },
   timestamp: { control: false },
 };
