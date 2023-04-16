@@ -1,10 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 import "./TextToggled.scss";
 
 export default function TextToggled({ label, isActive, onClick }) {
-  const className = isActive ? "text-style" : "text-style passive";
+  const className = classNames("text-style", { passive: isActive });
 
   return (
     <div className={className} onClick={onClick} onKeyDown={onClick}>

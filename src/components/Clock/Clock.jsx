@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import classNames from "classnames";
 
 import "./Clock.scss";
 import { TextToggled } from "@base-components";
@@ -14,9 +15,11 @@ export default function Clock({ size, timestamp, useInterval, isMode24H }) {
   const [currentDay, setCurrentDay] = useState(localeTime.day);
   const [ampmState, setAmPmState] = useState(localeTime.ampm);
   const sizeObject = CLOCK_SIZES[size] || CLOCK_SIZES.medium;
+  const classes = classNames('clock-component-container',size)
+  
   return (
     <div
-      className={`clock-component-container clock-${size}`}
+      className={classes}
       style={sizeObject}
     >
       <div className="component-container">
@@ -64,7 +67,7 @@ Clock.propTypes = {
 };
 
 Clock.defaultProps = {
-  size: "small",
+  size: Object.keys(CLOCK_SIZES)[0],
   timestamp: undefined,
   useInterval: true,
   isMode24H: false,
