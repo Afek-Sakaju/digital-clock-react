@@ -5,7 +5,7 @@ import classNames from "classnames";
 import "./TextToggled.scss";
 
 export default function TextToggled({ label, isActive, onClick }) {
-  const className = classNames("text-style", { passive: isActive });
+  const className = classNames("text-style", { passive: !isActive });
 
   return (
     <div className={className} onClick={onClick} onKeyDown={onClick}>
