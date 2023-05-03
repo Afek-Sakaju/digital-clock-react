@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 
 import "./DigitsClock.scss";
-import Digit from "@base-components/Digit/Digit";
+import Digit from "../Digit/Digit";
 
 export default function DigitsClock({ time }) {
   let [hh, mm, ss] = time?.split(":") || [];

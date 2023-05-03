@@ -2,8 +2,8 @@
 import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 
-import { DigitsClock } from "@base-components";
-import { getDateFormat } from "@utils";
+import { DigitsClock } from "../../base-components";
+import { getDateFormat } from "../../utils";
 
 export default function ManagedDigitsClock({
   ampmState,

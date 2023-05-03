@@ -1,7 +1,7 @@
 import React from "react";
 
 import Clock from "../Clock";
-import { CLOCK_SIZES } from "@utils";
+import { CLOCK_SIZES } from "../../../utils";
 
 export default {
   title: "components/Clock",
