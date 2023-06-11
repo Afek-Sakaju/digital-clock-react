@@ -11,7 +11,7 @@ function App() {
     <div className="app-container">
       <div>
         <div className="input-container">
-          <h3>useInterval:</h3>
+          <h3>Interval:</h3>
           <input
             type="checkbox"
             checked={useInterval}
@@ -19,7 +19,7 @@ function App() {
           />
         </div>
         <div className="input-container">
-          <h3>size:</h3>
+          <h3>Size:</h3>
           {Object.keys(CLOCK_SIZES).map((size, i) => {
             return (
               // eslint-disable-next-line jsx-a11y/label-has-associated-control
