@@ -1,6 +1,6 @@
 # Digital-Clock-React
 
-### This NPM package provides a digital clock component for ReactJS applications. The component is built using ReactJS, JavaScript, SASS and ESLINT to provide a user-friendly and visually appealing clock feature that can be easily integrated into any application. <br />
+### This NPM package presents a digital clock component tailored for ReactJS applications. It utilizes ReactJS, JavaScript, SASS, and ESLint to create an intuitive and visually appealing clock feature. With easy integration capabilities, it seamlessly becomes a part of any application, enhancing its functionality. <br />
 
 <img src="./readme-resources/clock.png" width=150px height=150px align="right">
 
@@ -12,22 +12,21 @@
 
 ## Configuration Options
 
-### This digital clock component offers a variety of configuration options to customize its appearance and functionality, including:
+### The digital clock component offers a variety of configuration options to customize its appearance and functionality, including:
 
-- **size**: The clock face can be displayed in 2 sizes: medium/small.
-- **timestamp**: The clock can display a specific timestamp, allowing you to represent any given time.
-- **isMode24H(24/12 Hours Mode)**: The clock can be displayed in either 12-hour or 24-hour mode.
-- **useInterval**: Its optional to use the clock as static clock, and to turn off the interval.
+- **size**: You have the option to showcase the clock face in two sizes: medium or small.
+- **timestamp**: The clock has the capability to exhibit a precise timestamp, enabling you to depict any desired time.
+- **isMode24H(24/12 Hours Mode)**: The clock offers the flexibility to be presented in either the 12-hour or 24-hour format.
+- **useInterval**: You can optionally use the clock as a static display by turning off the interval.
 
 </br>
 
-## Usage
-
-**Example of using the clock in react app file, customized with the mentioned props**:
+## Usage:
 
 ```js
 import React from "react";
 import { Clock } from "digital-clock-react";
+import { myTimestamp } from "./consts";
 
 function App() {
   return (
@@ -36,7 +35,7 @@ function App() {
         isMode24H
         size="small"
         useInterval={false}
-        timestamp={MY_REGION_TIMESTAMP}
+        timestamp={myTimestamp}
       />
     </div>
   );
@@ -46,14 +45,12 @@ export default App;
 ```
 
 **Installation:**</br>
-run the following command on your terminal:</br> _`npm install digital-clock-react`_
 
-**(optional) Testing the utils function with js-docs:**</br>
-run the following command on your terminal:</br> _`npm run build-jsdocs`_</br>then open the 'index.html' file inside the folder 'js-docs'.
+- `npm install digital-clock-react` <br /> Include the package in your project's dependencies.
 
 ---
 
-### **Example of using the clock component:**
+### **Here's an example showcasing the utilization of the clock component:**
 
 ![Example-GIF](./readme-resources/clock-gif.gif)
 
