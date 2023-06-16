@@ -50,7 +50,7 @@ export default App;
 
 **Development:**</br>
 
-- `npm run build-jsdocs`</br>For JSDocs,after running open the 'index.html' file located inside the 'js-docs' folder.
+- `npm run build-jsdocs`</br>For JSDocs of the utils functions, after running open the 'index.html' file located inside the 'js-docs' folder.
 
 ---
 
