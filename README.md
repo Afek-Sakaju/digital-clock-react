@@ -48,6 +48,10 @@ export default App;
 
 - `npm install digital-clock-react` <br /> Include the package in your project's dependencies.
 
+**Development:**</br>
+
+- `npm run build-jsdocs`</br>For JSDocs,after running open the 'index.html' file located inside the 'js-docs' folder.
+
 ---
 
 ### **Here's an example showcasing the utilization of the clock component:**
