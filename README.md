@@ -14,10 +14,10 @@
 
 ### The digital clock component offers a variety of configuration options to customize its appearance and functionality, including:
 
-- **size**: You have the option to showcase the clock face in two sizes: medium or small.
-- **timestamp**: The clock has the capability to exhibit a precise timestamp, enabling you to depict any desired time.
-- **isMode24H(24/12 Hours Mode)**: The clock offers the flexibility to be presented in either the 12-hour or 24-hour format.
-- **useInterval**: You can optionally use the clock as a static display by turning off the interval.
+-   **size**: You have the option to showcase the clock face in two sizes: medium or small.
+-   **timestamp**: The clock has the capability to exhibit a precise timestamp, enabling you to depict any desired time.
+-   **isMode24H(24/12 Hours Mode)**: The clock offers the flexibility to be presented in either the 12-hour or 24-hour format.
+-   **useInterval**: You can optionally use the clock as a static display by turning off the interval.
 
 </br>
 
@@ -29,16 +29,16 @@ import { Clock } from "digital-clock-react";
 import { myTimestamp } from "./consts";
 
 function App() {
-  return (
-    <div className="app-container">
-      <Clock
-        isMode24H
-        size="small"
-        useInterval={false}
-        timestamp={myTimestamp}
-      />
-    </div>
-  );
+    return (
+        <div className="app-container">
+            <Clock
+                isMode24H
+                size="small"
+                useInterval={false}
+                timestamp={myTimestamp}
+            />
+        </div>
+    );
 }
 
 export default App;
@@ -46,11 +46,11 @@ export default App;
 
 **Installation:**</br>
 
-- `npm install digital-clock-react` <br /> Include the package in your project's dependencies.
+-   `npm install digital-clock-react` <br /> Include the package in your project's dependencies.
 
 **Development:**</br>
 
-- `npm run build-jsdocs`</br>For JSDocs of the utils functions, after running open the 'index.html' file located inside the 'js-docs' folder.
+-   `npm run build-jsdocs`</br>For JSDocs of the utils functions, after running open the 'index.html' file located inside the 'js-docs' folder.
 
 ---
 
@@ -64,5 +64,5 @@ export default App;
 
 :octocat: **Afek Sakaju**
 
-- LinkedIn: [@afeksa](https://www.linkedin.com/in/afeksa/)
-- GitHub: [@afekTheMiniLearner](https://github.com/afekTheMiniLearner)
+-   LinkedIn: [@afeksa](https://www.linkedin.com/in/afeksa/)
+-   GitHub: [@Afek-Sakaju](https://github.com/Afek-Sakaju)
