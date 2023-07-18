@@ -6,7 +6,7 @@
 
 ---
 
-**Live demo:** </br>[digital-clock-react](http://afektheminilearner.github.io/digital-clock-react)
+**Live demo:** </br>[digital-clock-react](http://Afek-Sakaju.github.io/digital-clock-react)
 
 ---
 
