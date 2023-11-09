@@ -1,6 +1,6 @@
 {
     "name": "digital-clock-react",
-    "description": "Digital Clock configurable component",
+    "description": "This NPM package presents a digital-clock component for ReactJS applications, it offers intuitive and visually appealing clock feature with easy integration capabilities.",
     "author": "afek-sakaju",
     "homepage": "http://Afek-Sakaju.github.io/digital-clock-react/",
     "keywords": [
