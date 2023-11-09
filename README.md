@@ -1,6 +1,6 @@
 # Digital-Clock-React
 
-### This NPM package presents a digital clock component tailored for ReactJS applications. It utilizes ReactJS, JavaScript, SASS, and ESLint to create an intuitive and visually appealing clock feature. With easy integration capabilities, it seamlessly becomes a part of any application, enhancing its functionality. <br />
+### This NPM package presents a digital clock component tailored for React applications. It utilizes ReactJS, JavaScript, SASS, and ESLint to create an intuitive and visually appealing clock feature. With easy integration capabilities, it seamlessly becomes a part of any application, enhancing its functionality. <br />
 
 <img src="./readme-resources/clock.png" width=150px height=150px align="right">
 
